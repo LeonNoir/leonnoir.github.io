@@ -10,5 +10,5 @@ tag3:
 tag4:
   name: Программы
   
-tag5:
-  name: Documents
+documents:
+  name: documents
