@@ -1,0 +1,14 @@
+tag1:
+  name: Видео
+
+tag2:
+  name: Музыка
+
+tag3:
+  name: Мемы
+
+tag4:
+  name: Программы
+  
+documents:
+  name: documents

@@ -1,0 +1,128 @@
+/*
+
+Atom One Light by Daniel Gamage
+Original One Light Syntax theme from https://github.com/atom/one-light-syntax
+
+base:    #fafafa
+mono-1:  #383a42
+mono-2:  #686b77
+mono-3:  #a0a1a7
+hue-1:   #0184bb
+hue-2:   #4078f2
+hue-3:   #a626a4
+hue-4:   #50a14f
+hue-5:   #e45649
+hue-5-2: #c91243
+hue-6:   #986801
+hue-6-2: #c18401
+
+*/
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+	cursor: pointer;
+}
+.dropdown:hover {
+
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+	min-width: 69px;
+	background-color: #bfb8bf;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+	border-width: 2px 2px 0px 2px;
+	border-style: ridge ridge groove ridge;
+	border-color: #7f787f #fff8ff #fff8ff #7f787f;
+}
+
+.dropdown-content .fav-links div{
+	 
+	 width: 155px;
+}
+
+.dropdown-content .fav-links:hover{
+	 border-style: initial;
+
+}
+
+
+.dropdown-content div:hover {
+	background-color: #7f787f;
+	min-width: 65px;
+	border-width: 0px 2px 0px 2px;
+	border-style: ridge groove groove groove;
+	border-color: #7f787f #fff8ff #fff8ff #7f787f;
+}
+
+.dropdown-content div {
+	padding: 10px 0px 10px 0px;
+	position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/*
+
+C L O C K
+  C S S 
+
+*/
+
+.clock_title
+{	
+	background: gray;
+	padding: 2px 4px 3px 4px;
+	position: relative;
+	color: #bfb8bf;
+	font-size: 14px;
+	font-weight: bold;
+	margin: 0;
+	border: 0;
+}
+.clock_title img {
+	float: left;
+	width: 14px;
+	height: 14px;
+	margin: 0 3px 0 0;
+}
+
+.clock_title h4 {
+color: #bfb8bf;
+  font-size: 14px;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  text-align: left;
+}
+
+.clockpage
+{
+	margin: auto;
+	max-width: 250px;
+	min-width: 100px;
+	background: white;
+	text-align: center;
+	font-size: 32px;
+
+	margin-top: 50px;
+  
+	background: #bfb8bf;
+	border: 2px solid;
+	border-color: #fff8ff #000000 #000000 #fff8ff;
+	padding: 0px 0px 2px 0px;
+}
+#dayOfWeek
+{
+  display: block;
+  font-weight: normal;
+  font-size: 18px;
+}

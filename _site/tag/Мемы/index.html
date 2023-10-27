@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<link rel="stylesheet" href="/assets/css/custom.css">
+	<link rel="stylesheet" href="/assets/css/atom-one-light.css">
+    
+        <title>1042.ru</title>
+		<link rel="stylesheet" type="text/css" href="/assets/css/001.css">
+    
+	<link rel="stylesheet" href="/assets/css/font-awesome.min.css">
+	<link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
+	<script src="/assets/js/highlight.pack.js"></script>
+	<script src="/assets/js/clock.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="default_title">
+			<img src="/assets/img/mycomputer.png" />
+			
+				<h1>Мемы</h1>
+			
+		</div>
+		<style>
+
+</style>
+
+<script>
+  document.body.style.backgroundColor = localStorage.color;
+  //alert(localStorage.color);
+  //console.log(localStorage.color);
+  //console.log(colorValue);
+  //localStorage.clear();
+</script>
+
+<script>
+function changeColor(colorValue) {
+    document.body.style.background = document.getElementById(colorValue).dataset.color;
+	localStorage.setItem('color', document.body.style.background);
+}
+</script>
+
+<ul class="topbar">
+	<a href="/"><li><u>Ф</u>айл</li></a>
+	
+	<div class="dropdown">
+	<a><li><u>И</u>збранное</li></a>
+		<div class="dropdown-content">
+		<a class="fav-links" href="http://ji1.ru" target="_blank"><div>Сервис коротких ссылок</div></a>
+		<a class="fav-links" href="http://freecraft.ru" target="_blank"><div>Майнкрафт Сервер</div></a>
+		<a class="fav-links" href="http://tvnw.ru" target="_blank"><div>Оцифровка VHS спб</div></a>
+		</div>
+	</div>
+	
+	<div class="dropdown">
+	<a><li><u>В</u>ид</li></a>
+		<div class="dropdown-content">
+		<div id="defy" data-color="#008082" onclick="changeColor('defy')">Стандарт</div>
+		<div id="dark" data-color="#2b2a33" onclick="changeColor('dark')">Темная</div>			
+		<div id="light" data-color="#b3e5fc" onclick="changeColor('light')">Светлая</div>
+		
+		</div>
+	</div>
+	
+	<a href="/about"><li><u>С</u>правка</li></a>
+</ul>
+		<div class="tag_list">
+			<ul id="tag-list">
+				<li><a href="/" ><img src="/assets/img/disk.png" />(C:)</a>
+			<ul>
+				
+				
+				<li><a href="/tag/documents/" title="documents"><img src="/assets/img/folder.ico" />documents</a></li>
+				
+				<li><a href="/tag/programms/" title="programms"><img src="/assets/img/folder.ico" />programms</a></li>
+				
+			</ul>
+				</li>
+			</ul>
+		</div>
+		<div class="post_list">
+			
+				
+
+					<ul>
+	
+	
+		
+	
+	
+</ul>
+					
+				
+			
+		</div>
+		<div class="post_total">
+			
+				<div class="left">0 object(s)</div>
+			
+			<div class="right">&nbsp;</div>
+		</div>
+	</div>
+	
+	<script src="/assets/js/001.js"></script>
+	<script src="/assets/js/002.js"></script>
+	<div class="footer">
+	
+	<script>
+			function initOnLoad(fn) {
+			  var readyState = document.readyState
+			  if(readyState === 'interactive' || readyState === 'complete') {
+				return fn()
+			  }
+			  window.addEventListener('DOMContentLoaded', fn)
+			  }
+			initOnLoad(function() {
+			  clockTimer();
+			})
+	</script>
+		
+		<div class="clockpage">
+		<div class="clock_title">
+		
+		<img src="/assets/img/64-64-clock.png">
+		<h4>Время</h4>
+		
+		</div>
+
+		<span id="clock"></span><span id="dayOfWeek"></span>
+		
+		
+		</div>
+		
+	</div>
+</body>
+</html>
