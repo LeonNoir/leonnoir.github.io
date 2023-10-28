@@ -6,10 +6,13 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 	<link rel="stylesheet" href="/assets/css/custom.css">
 	<link rel="stylesheet" href="/assets/css/atom-one-light.css">
-    
-        <title>404...</title>
+    {% if page.title or page.title == 'Справка'%}
+        <title>{{ page.title }}</title>
 		<link rel="stylesheet" type="text/css" href="/assets/css/002.css">
-    
+    {% else %}
+        <title>{{ site.name }}</title>
+		<link rel="stylesheet" type="text/css" href="/assets/css/001.css">
+    {% endif %}
 	<link rel="stylesheet" href="/assets/css/font-awesome.min.css">
 	<link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
 	<link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
@@ -21,112 +24,89 @@
 	<div class="wrapper">
 		<div class="default_title">
 			<img src="/assets/img/mycomputer.png" />
-			
-				<h1>1042.ru</h1>
-			
+			{% if page.tag %}
+				<h1>{{ page.tag }}</h1>
+			{% else %}
+				<h1>{{ site.name }}</h1>
+			{% endif %}
 		</div>
-		<style>
-
-</style>
-
-<script>
-  document.body.style.backgroundColor = localStorage.color;
-  //alert(localStorage.color);
-  //console.log(localStorage.color);
-  //console.log(colorValue);
-  //localStorage.clear();
-</script>
-
-<script>
-function changeColor(colorValue) {
-    document.body.style.background = document.getElementById(colorValue).dataset.color;
-	localStorage.setItem('color', document.body.style.background);
-}
-</script>
-
-<ul class="topbar">
-	<a href="/"><li><u>Ф</u>айл</li></a>
-	
-	<div class="dropdown">
-	<a><li><u>И</u>збранное</li></a>
-		<div class="dropdown-content">
-		<a class="fav-links" href="http://ji1.ru" target="_blank"><div>Сервис коротких ссылок</div></a>
-		<a class="fav-links" href="http://freecraft.ru" target="_blank"><div>Майнкрафт Сервер</div></a>
-		<a class="fav-links" href="http://tvnw.ru" target="_blank"><div>Оцифровка VHS спб</div></a>
-		</div>
-	</div>
-	
-	<div class="dropdown">
-	<a><li><u>В</u>ид</li></a>
-		<div class="dropdown-content">
-		<div id="defy" data-color="#008082" onclick="changeColor('defy')">Стандарт</div>
-		<div id="dark" data-color="#2b2a33" onclick="changeColor('dark')">Темная</div>			
-		<div id="light" data-color="#b3e5fc" onclick="changeColor('light')">Светлая</div>
-		
-		</div>
-	</div>
-	
-	<a href="/about"><li><u>С</u>правка</li></a>
-</ul>
+		{% include topbar.html %}
 		<div class="tag_list">
 			<ul id="tag-list">
 				<li><a href="/" ><img src="/assets/img/disk.png" />(C:)</a>
 			<ul>
-				
-				
-				<li><a href="/tag/documents/" title="documents"><img src="/assets/img/folder.ico" />documents</a></li>
-				
-				<li><a href="/tag/mems/" title="mems"><img src="/assets/img/folder.ico" />mems</a></li>
-				
-				<li><a href="/tag/programms/" title="programms"><img src="/assets/img/folder.ico" />programms</a></li>
-				
+				{% assign tags = site.tags | sort %}
+				{% for tag in tags %}
+				<li><a href="/tag/{{ tag | first | slugify }}/" title="{{ tag[0] | replace:'-', ' ' }}"><img src="/assets/img/folder.ico" />{{ tag[0] | replace:'-', ' ' }}</a></li>
+				{% endfor %}
 			</ul>
 				</li>
 			</ul>
 		</div>
 		<div class="post_list">
-			
+			{% unless page.date%}
+				{% if page.url == '/' or page.url == '/about/' %}
+					<ul>
+						{% assign tags = site.tags | sort %}
+						{% for tag in tags %}
+				<li><a href="/tag/{{ tag | first | slugify }}/" title="{{ tag[0] | replace:'-', ' ' }}"><img src="/assets/img/folder.ico" />{{ tag[0] | replace:'-', ' ' }}</a></li>
+						{% endfor %}
+					</ul>
+				
+				{% else %}
+
+					{{ content }}
+					
+				{% endif %}
+			{% else %}
+				<ul>
 				
 
-					<p>Sorry this page does not exist... :(</p>
+
+
+{% for tag in page.tags %}
+  {% for post in site.tags[tag] %}
+			<li><a href="{{  post.url }}" title="{{ post.title }}"><img src="/assets/img/file.ico" title="{{ post.title }}" />{{ post.title }}</a></li>
+  {% endfor %}
+{% endfor %}
 
 					
+				</ul>
 				
-			
+
+				
+				
+			{% endunless %}
 		</div>
 		<div class="post_total">
-			
-				<div class="left">7 object(s)</div>
-			
+			{% if page.tag %}
+				<div class="left">{{ site.tags[page.tag] | size }} object(s)</div>
+			{% else %}
+				<div class="left">{{ site.posts | size }} object(s)</div>
+			{% endif %}
 			<div class="right">&nbsp;</div>
 		</div>
 	</div>
-	
+	{% if page.title %}
         <div class="content">
 			<div class="post_title">
 				<img src="/assets/img/file.png" />
-				<h1>404...</h1>
+				<h1>{{  page.title  }}</h1>
 				<a href="/"><div class="btn"><span class="fa fa-times"></span></div></a>
 				<div class="btn btn_max"><span class="fa fa-window-maximize"></span></div>
 				<div class="btn"><span class="fa fa-window-minimize"></span></div>
 			</div>
 			<ul class="topbar">
-				<li></li>
+				<li>{{ page.date | date: '%B %-d, %Y' }}</li>
 			</ul>
 			<div class="post_content">
-        		<p>Sorry this page does not exist... :(</p>
-
-				
-					<br>
-<hr>
-<br>
-<ul class="donate">
-	<p> .... </p>
-</ul>
-				
+        		{{ content }}
+				{% if page.title %}
+					{% include donate.html %}
+				{% endif %}
 			</div>
 		</div>
-    
+    {% endif %}
 	<script src="/assets/js/001.js"></script>
 	<script src="/assets/js/002.js"></script>
 	<div class="footer">

@@ -1,14 +1,14 @@
-tag1:
-  name: Видео
+video:
+  name: video
 
-tag2:
-  name: Музыка
+music:
+  name: music
 
-tag3:
-  name: Мемы
+mems:
+  name: mems
 
-tag4:
-  name: Программы
+programms:
+  name: programms
   
 documents:
   name: documents
