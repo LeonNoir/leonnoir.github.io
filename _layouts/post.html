@@ -100,8 +100,16 @@
 	{% if page.title %}
         <div class="content">
 			<div class="post_title">
-				<img src="/assets/img/file.png" />
-				<h1>{{  page.title  }}</h1>
+				
+				{% for i in page.tags %}
+				{% if i == 'mems' %}
+				<img src="/assets/img/imgicon.png" />
+				{% else %}
+				<img src="/assets/img/file.png" /> 
+				{% endif %}
+				{% endfor %}
+				
+				<h1>{{  page.title  }} 1{{page.tags}}1</h1>
 				<a href="/"><div class="btn"><span class="fa fa-times"></span></div></a>
 				<div class="btn btn_max"><span class="fa fa-window-maximize"></span></div>
 				<div class="btn"><span class="fa fa-window-minimize"></span></div>
