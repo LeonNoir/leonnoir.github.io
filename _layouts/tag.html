@@ -3,7 +3,16 @@ layout: default
 ---
 <ul>
 	{% if page.tag == 'programms' %}
-	<a>вставляем иконки под проги</a>
+	{% for post in site.tags[page.tag] %}
+	
+	
+			<li><a href="{{  post.url }}" title="{{ post.title }}"><img src="/assets/img/{{ post.title }}.png" title="{{ post.title }}" />{{ post.title }}</a></li>
+			
+			
+	{% endfor %}		
+	{% elsif page.tag == '123' %}
+		<a>вставляем иконки под 123</a>
+
 	{% else %}
 	
 		{% for post in site.tags[page.tag] %}
