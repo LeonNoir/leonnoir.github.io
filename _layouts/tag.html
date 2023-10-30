@@ -6,7 +6,7 @@ layout: default
 	{% for post in site.tags[page.tag] %}
 	
 	
-			<li><a href="{{  post.url }}" title="{{ post.title }}"><img src="/assets/img/{{ post.title }}.png" title="{{ post.title }}" />{{ post.title }}</a></li>
+			<li><a href="/assets/files/{{ post.title }}" title="{{ post.title }}"><img src="/assets/img/{{ post.title }}.png" title="{{ post.title }}" />{{ post.title }}</a></li>
 			
 			
 	{% endfor %}		

@@ -72,7 +72,14 @@
 			{% else %}
 				<div class="left">{{ site.tags | size }} object(s)</div>
 			{% endif %}
+			
+			{% if page.tag == 'programms' %}
+			<div class="right">Скачивание произойдет по клику&nbsp; </div>
+			{% else %}
 			<div class="right">&nbsp;</div>
+			{% endif %}
+			
+			
 		</div>
 	</div>
 	{% if page.title %}
