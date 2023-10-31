@@ -86,7 +86,13 @@
 	{% if page.title %}
         <div class="content">
 			<div class="post_title">
+			
+				{% if page.url == '/about/' %}
+				<img src="/assets/img/about-16-16.png" />
+				{% else %}
 				<img src="/assets/img/file.png" />
+				{% endif %}
+				
 				<h1>{{  page.title  }}</h1>
 				<a href="/"><div class="btn"><span class="fa fa-times"></span></div></a>
 				<div class="btn btn_max"><span class="fa fa-window-maximize"></span></div>
