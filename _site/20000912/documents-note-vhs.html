@@ -7,7 +7,7 @@
 	<link rel="stylesheet" href="/assets/css/custom.css">
 	<link rel="stylesheet" href="/assets/css/atom-one-light.css">
     
-        <title>Note</title>
+        <title>Оцифровка VHS</title>
 		<link rel="stylesheet" type="text/css" href="/assets/css/002.css">
     
 	<link rel="stylesheet" href="/assets/css/font-awesome.min.css">
@@ -137,24 +137,57 @@ function changeColor(colorValue) {
 				
 				
 				
-				<h1>Note</h1>
+				<h1>Оцифровка VHS</h1>
 				<a href="/"><div class="btn"><span class="fa fa-times"></span></div></a>
 				<div class="btn btn_max"><span class="fa fa-window-maximize"></span></div>
 				<div class="btn"><span class="fa fa-window-minimize"></span></div>
 			</div>
 			<ul class="topbar">
-				<li>September 11, 2000</li>
+				<li>September 12, 2000</li>
 			</ul>
 			<div class="post_content">
-        		<h2 id="push-to-github">Push to github</h2>
+        		<h1 id="главные-принципы">Главные принципы</h1>
 <ul>
-  <li>git clone https://github.com/Lr/lr.github.io.git</li>
-  <li>git push -u origin main</li>
-  <li>cd *****.github.io</li>
-  <li>git add .</li>
-  <li>git status</li>
-  <li>git commit -m “”</li>
-  <li>git push</li>
+  <li>Цифруем кассету в OBS предворительно убирая поля</li>
+  <li>через ависинт фильтруем и делаем деинтерлейс</li>
+  <li>кидаем в виртуалдаб ависинт файл, убираем лишнее и кодируем</li>
+</ul>
+
+<h1 id="настройка-obs">Настройка OBS</h1>
+<h2 id="настройки--видео">настройки &gt; Видео</h2>
+<ul>
+  <li>Базовое (основа) разрешение: 720×576</li>
+  <li>Выходное (масштабированное) разрешение: 768×576 (или 720×576 но тогда в ависинте меняй)</li>
+  <li>Фильтр масштабирования: Бикубический (четкое масштабирование, 16 выборок)</li>
+  <li>Целое значение FPS: 50 (но возможно 25 будет лучше, надо проверить)
+    <h2 id="настройки--вывод--запись">настройки &gt; Вывод &gt; Запись</h2>
+  </li>
+  <li>формат контейнера: avi</li>
+  <li>Битрейт: 10 000 (рекомендуют 25 000)</li>
+  <li>Интервал ключевых кадров: 2</li>
+  <li>Кодировщик видео: huffyuv</li>
+  <li>Аудио битрейт: 320 Kbps</li>
+  <li>Кодировщик аудио: pcm_s16le</li>
+</ul>
+
+<h2 id="настройка-avisynth">Настройка Avisynth</h2>
+<ul>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+</ul>
+
+<h2 id="настройка-кодеков">Настройка кодеков</h2>
+<ul>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
 </ul>
 
 				
