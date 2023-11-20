@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "meme 04"
+title: "гос04.jpg"
 tags: mems
 ---
 
-![Alt text](/assets/img/mems/04.jpg "a title")
+![Alt text](/assets/img/mems/gosling/04.jpg "a title")
