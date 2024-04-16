@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Оцифровка VHS"
+title: "VHS"
 tags: documents
 ---
 # Главные принципы

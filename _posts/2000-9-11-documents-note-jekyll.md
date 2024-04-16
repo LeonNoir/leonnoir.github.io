@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Note Jekyll"
+title: "Jekyll"
 tags: documents
 ---
 
