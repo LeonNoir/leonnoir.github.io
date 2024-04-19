@@ -17,3 +17,7 @@ tags: documents
 - git add .
 - git commit -m "1"
 - git push
+
+
+## Набор иконок для дизайна
+- Набор [oldwindowsicons.tumblr.com](https://oldwindowsicons.tumblr.com/tagged/windows)
