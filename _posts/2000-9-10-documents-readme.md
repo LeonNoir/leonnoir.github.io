@@ -6,7 +6,7 @@ tags: documents
 
 ## Инструкции:
 
-по регулярным выражениям в notepad++
+по [регулярным выражениям в notepad++](/content/notepad/)
 
 по правилам в iptables
 

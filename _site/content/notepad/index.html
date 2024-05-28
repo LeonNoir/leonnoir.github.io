@@ -7,7 +7,7 @@
 	<link rel="stylesheet" href="/assets/css/custom.css">
 	<link rel="stylesheet" href="/assets/css/atom-one-light.css">
     
-        <title>VHS</title>
+        <title>Шпаргалка по нотпаду</title>
 		<link rel="stylesheet" type="text/css" href="/assets/css/002.css">
     
 	<link rel="stylesheet" href="/assets/css/font-awesome.min.css">
@@ -86,121 +86,58 @@ function changeColor(colorValue) {
 		</div>
 		<div class="post_list">
 			
-				<ul>
 				
-
-
-
-
-  
-  
-      	
-			<li><a href="/20000910/documents-readme" title="ReadMe"><img src="/assets/img/file.ico" title="ReadMe" />ReadMe</a></li>
-			
-  
-  
-      	
-			<li><a href="/20000911/documents-note-jekyll" title="Jekyll"><img src="/assets/img/file.ico" title="Jekyll" />Jekyll</a></li>
-			
-  
-  
-      	
-			<li><a href="/20000911/documents-note-python" title="Python"><img src="/assets/img/file.ico" title="Python" />Python</a></li>
-			
-  
-  
-      	
-			<li><a href="/20000912/documents-note-vhs" title="VHS"><img src="/assets/img/file.ico" title="VHS" />VHS</a></li>
-			
-  
-
-	
-				</ul>
-		
+					<ul>
+						
+						
+				<li><a href="/tag/documents/" title="documents"><img src="/assets/img/folder.ico" />documents</a></li>
+						
+				<li><a href="/tag/mems/" title="mems"><img src="/assets/img/folder.ico" />mems</a></li>
+						
+				<li><a href="/tag/programms/" title="programms"><img src="/assets/img/folder.ico" />programms</a></li>
+						
+					</ul>
+				
+				
 			
 		</div>
 		<div class="post_total">
 			
+				<div class="left">3 object(s)</div>
 			
-				
-				<div class="left">
-
-	
-				4 object(s)</div>
 			
-	
+			
+			
 			<div class="right">&nbsp;</div>
+			
+			
+			
 		</div>
 	</div>
 	
         <div class="content">
 			<div class="post_title">
+			
+				
+				<img src="/assets/img/file.png" />
 				
 				
-				
-				<img src="/assets/img/file.png" /> 
-				
-				
-				
-				<h1>VHS</h1>
+				<h1>Шпаргалка по нотпаду</h1>
 				<a href="/"><div class="btn"><span class="fa fa-times"></span></div></a>
 				<div class="btn btn_max"><span class="fa fa-window-maximize"></span></div>
 				<div class="btn"><span class="fa fa-window-minimize"></span></div>
 			</div>
 			<ul class="topbar">
-				<li>September 12, 2000</li>
+				<li></li>
 			</ul>
 			<div class="post_content">
-        		<h1 id="главные-принципы">Главные принципы</h1>
-<ul>
-  <li>Цифруем кассету в OBS предворительно убирая поля</li>
-  <li>через ависинт делаем деинтерлейс и, при необходимости, фильтруем</li>
-  <li>кидаем в виртуалдаб ависинт файл, убираем лишнее и кодируем</li>
-</ul>
+        		<h2 id="заменить-один-html-тег-на-другой-открывающую-и-закрывающую-части">Заменить один html тег на другой, открывающую и закрывающую части</h2>
 
-<h1 id="настройка-obs">Настройка OBS</h1>
-<p>## настройки &gt; Видео
-- Базовое (основа) разрешение: 720×576
-- Выходное (масштабированное) разрешение: 768×576 (или 720×576 но тогда в ависинте меняй)
-- Фильтр масштабирования: Бикубический (четкое масштабирование, 16 выборок)
-- Целое значение FPS: 50 (но возможно 25 будет лучше, надо проверить)
-## настройки &gt; Вывод &gt; Запись
-- формат контейнера: avi
-- Битрейт: 10 000 (рекомендуют 25 000)
-- Интервал ключевых кадров: 2
-- Кодировщик видео: huffyuv
-- Аудио битрейт: 320 Kbps
-- Кодировщик аудио: pcm_s16le</p>
-
-<h2 id="настройка-avisynth">Настройка Avisynth</h2>
-<p>мои мысли по .TomsMoComp(1,5, 1)</p>
-
-<p>при значении .TomsMoComp(1,0, 1) - при 50 кадрах, кадры дублируются, может попробовать на 25 кадрах?</p>
-
-<p>в целом, значение 0 лучше чем от 1 до 30. при этом я не вижу разницы, от 1 до 30 вообще.</p>
-
-<p>Пишут, что в реальности выше 15 не используют. Чем выше число, тем больше процессорного времени и артефактов.</p>
-
-<ul>
-  <li></li>
-  <li></li>
-  <li></li>
-</ul>
-
-<h2 id="настройка-кодеков">Настройка кодеков</h2>
-<ul>
-  <li></li>
-  <li></li>
-  <li></li>
-</ul>
-
-<h2 id="разное">Разное</h2>
-
-<p>Спирт изопропиловый абсолютированный</p>
-
-<p>PAL_B
-PAL  is 720 x 576 pixels and has a refresh rate of 25 frames per second. 
-NTSC is 720 × 480 pixels</p>
+<pre><code class="language-no-line-numbers">Найти:
+&lt;p&gt;(.*)&lt;/p&gt;
+Заменить на:
+&lt;span&gt;\1&lt;/span&gt;
+</code></pre>
 
 				
 					<br>

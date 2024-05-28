@@ -45,7 +45,7 @@
 		</div>
 		<div class="post_list">
 			{% unless page.date%}
-				{% if page.url == '/' or page.url == '/about/' %}
+				{% if page.url == '/' or page.url == '/about/' or page.url == '/content/notepad/' %}
 					<ul>
 						{% assign tags = site.tags | sort %}
 						{% for tag in tags %}
