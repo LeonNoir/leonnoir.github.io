@@ -12,7 +12,14 @@ tags: documents
 ## Команда для компиляции
 - <div>python -m nuitka --mingw64 .\main.py --standalone --onefile</div>
 
-## X X X
+## Команда для компиляции (скрытый запуск)
+
+```no-line-numbers
+python -m nuitka --mingw64 --windows-disable-console .\main.py
+python -m nuitka --mingw64 --windows-disable-console --standalone --onefile .\main.py
+```
+- обязательно в PowerShell
+
 
 ## X X X
 
