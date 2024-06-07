@@ -86,6 +86,8 @@
 		<div class="post_total">
 			{% if page.tag %}
 				<div class="left">{{ site.tags[page.tag] | size }} object(s)</div>
+			{% elsif page.layout == 'page' %}
+				<div class="left">чтобы вернуться назад нажмите назад</div>
 			{% else %}
 				<div class="left">{{ site.tags | size }} object(s)</div>
 			{% endif %}
