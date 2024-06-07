@@ -5,36 +5,12 @@ tags: documents
 ---
 
 ## Инструкции:
+---
 
-по [регулярным выражениям в notepad++](/content/notepad/)
+**по [регулярным выражениям в notepad++](/pages/notepad/)**
 
-по [ключам PsExec](/content/psexec/)
+**по [ключам PsExec](/pages/psexec/)**
 
-по правилам в iptables
+**по правилам в iptables**
 
-по сетям в linux
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+**по сетям в linux**

@@ -57,14 +57,19 @@
 		</div>
 		<div class="post_list">
 			{% unless page.date%}
-				{% if page.url == '/' or page.url == '/about/' or page.url == '/content/notepad/' %}
+				{% if page.url == '/' or page.url == '/about/' %}
 					<ul>
 						{% assign tags = site.tags | sort %}
 						{% for tag in tags %}
 				<li><a href="/tag/{{ tag | first | slugify }}/" title="{{ tag[0] | replace:'-', ' ' }}"><img src="/assets/img/folder.ico" />{{ tag[0] | replace:'-', ' ' }}</a></li>
 						{% endfor %}
 					</ul>
-				
+				{% elsif page.layout == 'page' %}
+
+							<ul>
+								<li><a href="javascript:history.back()" title="Назад"><img src="/assets/img/back.png" title="ReadMe">Назад</a></li>
+							</ul>
+
 				{% else %}
 
 					{{ content }}
