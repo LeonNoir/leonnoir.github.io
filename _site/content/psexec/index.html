@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<link rel="stylesheet" href="/assets/css/custom.css">
+	<link rel="stylesheet" href="/assets/css/atom-one-light.css">
+    
+        <title>Шпаргалка по PsExec</title>
+		<link rel="stylesheet" type="text/css" href="/assets/css/002.css">
+    
+	<link rel="stylesheet" href="/assets/css/font-awesome.min.css">
+	<link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
+	<script src="/assets/js/highlight.pack.js"></script>
+	<script src="/assets/js/clock.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
+
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-0GZX3H860K"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+	
+	  gtag('config', 'G-0GZX3H860K');
+	</script>
+	<!-- Google tag (gtag.js) -->
+	
+</head>
+<body>
+	<div class="wrapper">
+		<div class="default_title">
+			<img src="/assets/img/mycomputer.png" />
+			
+				<h1>1042.ru</h1>
+			
+		</div>
+		<style>
+
+</style>
+
+<script>
+  document.body.style.backgroundColor = localStorage.color;
+  //alert(localStorage.color);
+  //console.log(localStorage.color);
+  //console.log(colorValue);
+  //localStorage.clear();
+</script>
+
+<script>
+function changeColor(colorValue) {
+    document.body.style.background = document.getElementById(colorValue).dataset.color;
+	localStorage.setItem('color', document.body.style.background);
+}
+</script>
+
+<ul class="topbar">
+	<a href="/"><li><u>Ф</u>айл</li></a>
+	
+	<div class="dropdown">
+	<a><li><u>И</u>збранное</li></a>
+		<div class="dropdown-content">
+		<a class="fav-links" href="http://ji1.ru" target="_blank"><div>Сервис коротких ссылок</div></a>
+		<a class="fav-links" href="http://freecraft.ru" target="_blank"><div>Майнкрафт Сервер</div></a>
+		<a class="fav-links" href="http://tvnw.ru" target="_blank"><div>Оцифровка VHS спб</div></a>
+		</div>
+	</div>
+	
+	<div class="dropdown">
+	<a><li><u>В</u>ид</li></a>
+		<div class="dropdown-content">
+		<div id="defy" data-color="#008082" onclick="changeColor('defy')">Стандарт</div>
+		<div id="dark" data-color="#2b2a33" onclick="changeColor('dark')">Темная</div>			
+		<div id="light" data-color="#b3e5fc" onclick="changeColor('light')">Светлая</div>
+		
+		</div>
+	</div>
+	
+	<a href="/about"><li><u>С</u>правка</li></a>
+</ul>
+		<div class="tag_list">
+			<ul id="tag-list">
+				<li><a href="/" ><img src="/assets/img/disk.png" />(C:)</a>
+			<ul>
+				
+				
+				<li><a href="/tag/documents/" title="documents"><img src="/assets/img/folder.ico" />documents</a></li>
+				
+				<li><a href="/tag/mems/" title="mems"><img src="/assets/img/folder.ico" />mems</a></li>
+				
+				<li><a href="/tag/programms/" title="programms"><img src="/assets/img/folder.ico" />programms</a></li>
+				
+			</ul>
+				</li>
+			</ul>
+		</div>
+		<div class="post_list">
+			
+				
+
+					<h2 id="примеры">Примеры</h2>
+
+<hr />
+<p><br />
+#<strong>Запуск ps скрипта лежащего на шаре:</strong></p>
+
+<pre><code class="language-no-line-numbers">psexec -s \\pc-name-01 Powershell -ExecutionPolicy Bypass -File \\192.168.1.1\$scr\uptime.ps1
+</code></pre>
+
+<p><strong>-s</strong>
+Удаленный процесс запускается из системной учетной записи.</p>
+
+<p><strong>-ExecutionPolicy Bypass</strong>
+нужно, что бы забайпассить политику запрещающую запуск скриптов</p>
+
+<p><br />
+#<strong>Отправка компа в ребут, когда иначе не хватает прав:</strong></p>
+
+<pre><code class="language-no-line-numbers">psexec \\pc-name-01 -s -d cmd.exe /c shutdown -r -t 0
+</code></pre>
+<p><strong>-s</strong>
+Удаленный процесс запускается из системной учетной записи.</p>
+
+<p><strong>-d</strong>
+Указывает, что не нужно ждать завершения приложения. Этот параметр следует использовать только при запуске неинтерактивных приложений.</p>
+
+<p><strong>cmd.exe /c SomeCommand</strong>
+Выполняет <strong>SomeCommand</strong> и затем выходит из обработчика команд</p>
+
+<h2 id="теория-использования">Теория использования:</h2>
+<hr />
+<pre><code class="language-no-line-numbers">psexec [\\компьютер[,компьютер2[,...] | @файл][-u пользователь [-p пароль]][-n s][-l][-s|-e][-x][-i [сеанс]][-c [-f|-v]][-w каталог][-d][-&lt;приоритет&gt;][-a n,n,... ] программа [аргументы]
+</code></pre>
+
+<p><strong>компьютер</strong>
+Указывает программе PsExec, что нужно запустить приложение на заданном компьютере или компьютерах. Если имя компьютера не указано, то программа PsExec запустит приложение в локальной системе, если же вместо имени компьютера задан символ «звездочка» (\*), то программа PsExec запустит приложение на всех компьютерах текущего домена.</p>
+
+<p><strong>@файл</strong>
+Указывает программе PsExec, что нужно запустить приложение на всех компьютерах, перечисленных в заданном текстовом файле.</p>
+
+<p><strong>-a</strong>
+Процессоры, на которых можно запустить приложение, отделяются запятыми, при этом процессоры нумеруются, начиная с 1. Например, чтобы запустить приложение на процессорах втором и четвертом, введите «-a 2,4»</p>
+
+<p><strong>-c</strong>
+Указанная программа копируется в удаленную систему для выполнения. Если этот параметр не задан, то приложение должно находиться в системной папке удаленной системы.</p>
+
+<p><strong>-d</strong>
+Указывает, что не нужно ждать завершения приложения. Этот параметр следует использовать только при запуске неинтерактивных приложений.</p>
+
+<p><strong>-e</strong>
+Указанный профиль учетной записи не загружается.</p>
+
+<p><strong>-f</strong>
+Указанная программа копируется в удаленную систему, даже если такой файл в удаленной системе уже есть.</p>
+
+<p><strong>-i</strong>
+Запускаемая программа получает доступ к рабочему столу указанного сеанса в удаленной системе. Если сеанс не задан, то процесс выполняется в консольном сеансе.</p>
+
+<p><strong>-l</strong>
+При запуске процесса пользователю предоставляются ограниченные права (права группы администраторов отменяются, и пользователю предоставляются только права, назначенные группе «пользователи»). В ОС Windows Vista процесс запускается с низким уровнем благонадежности.</p>
+
+<p><strong>-n</strong>
+Позволяет задать задержку подключения к удаленным компьютерам (в секундах).</p>
+
+<p><strong>-p</strong>
+Позволяет указать необязательный пароль для имени пользователя. Если этот параметр опущен, то будет выдан запрос на ввод пароля, при этом пароль не будет отображаться на экране.</p>
+
+<p><strong>-s</strong>
+Удаленный процесс запускается из системной учетной записи.</p>
+
+<p><strong>-u</strong>
+Позволяет указать необязательное имя пользователя для входа в удаленную систему.</p>
+
+<p><strong>-v</strong>
+Указанный файл копируется в удаленную систему вместо уже имеющегося только при условии, что номер его версии выше или он более новый.</p>
+
+<p><strong>-w</strong>
+Позволяет указать для процесса рабочий каталог (путь внутри удаленной системы).</p>
+
+<p><strong>-x</strong>
+Отображает интерфейс пользователя на рабочем столе Winlogon (только в локальной системе).</p>
+
+<p><strong>-приоритет (приоритет)</strong>
+Позволяет задавать для процесса различные приоритеты: -low (низкий), -belownormal (ниже среднего), -abovenormal (выше среднего), -high (высокий) или -realtime (реального времени).</p>
+
+<p><strong>программа</strong>
+Имя запускаемой программы.</p>
+
+<p><strong>аргументы</strong>
+Передаваемые аргументы (обратите внимание, что пути файлов должны указываться как локальные пути в целевой системе).</p>
+
+<p>Чтобы задать имя приложения, которое содержит пробелы, используйте кавычки, например psexec \marklap “c:\длинное имя\app.exe”. Введенные данные передаются в удаленную систему при нажатии клавиши «Ввод», для завершения удаленного процесса нужно нажать сочетание клавиш Ctrl-C.
+Если имя пользователя не задано, то удаленный процесс запускается из той же учетной записи, что и программа PsExec. Однако поскольку удаленный процесс является олицетворением, то он не будет иметь доступа к сетевым ресурсам удаленной системы. Если имя пользователя задано, то удаленный процесс запускается из указанной учетной записи и получает доступ к тем же сетевым ресурсам удаленной системы, что и данная учетная запись. Учтите, что пароль передается в удаленную систему в виде открытого текста.
+При обращении к локальной системе эту версию программы PsExec можно использовать вместо программы Runas, поскольку для программы PsExec не требуются права администратора.</p>
+
+<h2 id="пример">Пример</h2>
+<p>Эта команда вызывает интерактивный интерфейс командной строки в системе \marklap:
+<strong>psexec \marklap cmd</strong></p>
+
+<p>Эта команда запускает в удаленной системе программу IpConfig с параметром /all и выводит полученные данные на экран локальной системы:
+<strong>psexec \marklap ipconfig /all</strong></p>
+
+<p>Эта команда копирует программу test.exe в удаленную систему и выполняет ее в интерактивном режиме.
+<strong>psexec \marklap -c test.exe</strong></p>
+
+<p>Если в удаленной системе такая программа уже установлена и находится не в системном каталоге, укажите полный путь к этой программе
+<strong>psexec \marklap c:\bin\test.exe</strong></p>
+
+<p>Эта команда запускает в интерактивном режиме из системной учетной записи программу Regedit для просмотра данных разделов реестра SAM и SECURITY:
+<strong>psexec -i -d -s c:\windows\regedit.exe</strong></p>
+
+<p>Эта команда используется для вызова программы Internet Explorer от имени пользователя с ограниченными правами:
+<strong>psexec -l -d “c:\program files\internet explorer\iexplore.exe”</strong></p>
+
+					
+				
+			
+		</div>
+		<div class="post_total">
+			
+				<div class="left">3 object(s)</div>
+			
+			
+			
+			
+			<div class="right">&nbsp;</div>
+			
+			
+			
+		</div>
+	</div>
+	
+        <div class="content">
+			<div class="post_title">
+			
+				
+				<img src="/assets/img/file.png" />
+				
+				
+				<h1>Шпаргалка по PsExec</h1>
+				<a href="/"><div class="btn"><span class="fa fa-times"></span></div></a>
+				<div class="btn btn_max"><span class="fa fa-window-maximize"></span></div>
+				<div class="btn"><span class="fa fa-window-minimize"></span></div>
+			</div>
+			<ul class="topbar">
+				<li></li>
+			</ul>
+			<div class="post_content">
+        		<h2 id="примеры">Примеры</h2>
+
+<hr />
+<p><br />
+#<strong>Запуск ps скрипта лежащего на шаре:</strong></p>
+
+<pre><code class="language-no-line-numbers">psexec -s \\pc-name-01 Powershell -ExecutionPolicy Bypass -File \\192.168.1.1\$scr\uptime.ps1
+</code></pre>
+
+<p><strong>-s</strong>
+Удаленный процесс запускается из системной учетной записи.</p>
+
+<p><strong>-ExecutionPolicy Bypass</strong>
+нужно, что бы забайпассить политику запрещающую запуск скриптов</p>
+
+<p><br />
+#<strong>Отправка компа в ребут, когда иначе не хватает прав:</strong></p>
+
+<pre><code class="language-no-line-numbers">psexec \\pc-name-01 -s -d cmd.exe /c shutdown -r -t 0
+</code></pre>
+<p><strong>-s</strong>
+Удаленный процесс запускается из системной учетной записи.</p>
+
+<p><strong>-d</strong>
+Указывает, что не нужно ждать завершения приложения. Этот параметр следует использовать только при запуске неинтерактивных приложений.</p>
+
+<p><strong>cmd.exe /c SomeCommand</strong>
+Выполняет <strong>SomeCommand</strong> и затем выходит из обработчика команд</p>
+
+<h2 id="теория-использования">Теория использования:</h2>
+<hr />
+<pre><code class="language-no-line-numbers">psexec [\\компьютер[,компьютер2[,...] | @файл][-u пользователь [-p пароль]][-n s][-l][-s|-e][-x][-i [сеанс]][-c [-f|-v]][-w каталог][-d][-&lt;приоритет&gt;][-a n,n,... ] программа [аргументы]
+</code></pre>
+
+<p><strong>компьютер</strong>
+Указывает программе PsExec, что нужно запустить приложение на заданном компьютере или компьютерах. Если имя компьютера не указано, то программа PsExec запустит приложение в локальной системе, если же вместо имени компьютера задан символ «звездочка» (\*), то программа PsExec запустит приложение на всех компьютерах текущего домена.</p>
+
+<p><strong>@файл</strong>
+Указывает программе PsExec, что нужно запустить приложение на всех компьютерах, перечисленных в заданном текстовом файле.</p>
+
+<p><strong>-a</strong>
+Процессоры, на которых можно запустить приложение, отделяются запятыми, при этом процессоры нумеруются, начиная с 1. Например, чтобы запустить приложение на процессорах втором и четвертом, введите «-a 2,4»</p>
+
+<p><strong>-c</strong>
+Указанная программа копируется в удаленную систему для выполнения. Если этот параметр не задан, то приложение должно находиться в системной папке удаленной системы.</p>
+
+<p><strong>-d</strong>
+Указывает, что не нужно ждать завершения приложения. Этот параметр следует использовать только при запуске неинтерактивных приложений.</p>
+
+<p><strong>-e</strong>
+Указанный профиль учетной записи не загружается.</p>
+
+<p><strong>-f</strong>
+Указанная программа копируется в удаленную систему, даже если такой файл в удаленной системе уже есть.</p>
+
+<p><strong>-i</strong>
+Запускаемая программа получает доступ к рабочему столу указанного сеанса в удаленной системе. Если сеанс не задан, то процесс выполняется в консольном сеансе.</p>
+
+<p><strong>-l</strong>
+При запуске процесса пользователю предоставляются ограниченные права (права группы администраторов отменяются, и пользователю предоставляются только права, назначенные группе «пользователи»). В ОС Windows Vista процесс запускается с низким уровнем благонадежности.</p>
+
+<p><strong>-n</strong>
+Позволяет задать задержку подключения к удаленным компьютерам (в секундах).</p>
+
+<p><strong>-p</strong>
+Позволяет указать необязательный пароль для имени пользователя. Если этот параметр опущен, то будет выдан запрос на ввод пароля, при этом пароль не будет отображаться на экране.</p>
+
+<p><strong>-s</strong>
+Удаленный процесс запускается из системной учетной записи.</p>
+
+<p><strong>-u</strong>
+Позволяет указать необязательное имя пользователя для входа в удаленную систему.</p>
+
+<p><strong>-v</strong>
+Указанный файл копируется в удаленную систему вместо уже имеющегося только при условии, что номер его версии выше или он более новый.</p>
+
+<p><strong>-w</strong>
+Позволяет указать для процесса рабочий каталог (путь внутри удаленной системы).</p>
+
+<p><strong>-x</strong>
+Отображает интерфейс пользователя на рабочем столе Winlogon (только в локальной системе).</p>
+
+<p><strong>-приоритет (приоритет)</strong>
+Позволяет задавать для процесса различные приоритеты: -low (низкий), -belownormal (ниже среднего), -abovenormal (выше среднего), -high (высокий) или -realtime (реального времени).</p>
+
+<p><strong>программа</strong>
+Имя запускаемой программы.</p>
+
+<p><strong>аргументы</strong>
+Передаваемые аргументы (обратите внимание, что пути файлов должны указываться как локальные пути в целевой системе).</p>
+
+<p>Чтобы задать имя приложения, которое содержит пробелы, используйте кавычки, например psexec \marklap “c:\длинное имя\app.exe”. Введенные данные передаются в удаленную систему при нажатии клавиши «Ввод», для завершения удаленного процесса нужно нажать сочетание клавиш Ctrl-C.
+Если имя пользователя не задано, то удаленный процесс запускается из той же учетной записи, что и программа PsExec. Однако поскольку удаленный процесс является олицетворением, то он не будет иметь доступа к сетевым ресурсам удаленной системы. Если имя пользователя задано, то удаленный процесс запускается из указанной учетной записи и получает доступ к тем же сетевым ресурсам удаленной системы, что и данная учетная запись. Учтите, что пароль передается в удаленную систему в виде открытого текста.
+При обращении к локальной системе эту версию программы PsExec можно использовать вместо программы Runas, поскольку для программы PsExec не требуются права администратора.</p>
+
+<h2 id="пример">Пример</h2>
+<p>Эта команда вызывает интерактивный интерфейс командной строки в системе \marklap:
+<strong>psexec \marklap cmd</strong></p>
+
+<p>Эта команда запускает в удаленной системе программу IpConfig с параметром /all и выводит полученные данные на экран локальной системы:
+<strong>psexec \marklap ipconfig /all</strong></p>
+
+<p>Эта команда копирует программу test.exe в удаленную систему и выполняет ее в интерактивном режиме.
+<strong>psexec \marklap -c test.exe</strong></p>
+
+<p>Если в удаленной системе такая программа уже установлена и находится не в системном каталоге, укажите полный путь к этой программе
+<strong>psexec \marklap c:\bin\test.exe</strong></p>
+
+<p>Эта команда запускает в интерактивном режиме из системной учетной записи программу Regedit для просмотра данных разделов реестра SAM и SECURITY:
+<strong>psexec -i -d -s c:\windows\regedit.exe</strong></p>
+
+<p>Эта команда используется для вызова программы Internet Explorer от имени пользователя с ограниченными правами:
+<strong>psexec -l -d “c:\program files\internet explorer\iexplore.exe”</strong></p>
+
+				
+					<br>
+<hr>
+<br>
+<ul class="donate">
+	<p> .... </p>
+</ul>
+				
+			</div>
+		</div>
+    
+	<script src="/assets/js/001.js"></script>
+	<script src="/assets/js/002.js"></script>
+	<div class="footer">
+	
+	<script>
+			function initOnLoad(fn) {
+			  var readyState = document.readyState
+			  if(readyState === 'interactive' || readyState === 'complete') {
+				return fn()
+			  }
+			  window.addEventListener('DOMContentLoaded', fn)
+			  }
+			initOnLoad(function() {
+			  clockTimer();
+			})
+	</script>
+		
+		<div class="clockpage">
+		<div class="clock_title">
+		
+		<img src="/assets/img/64-64-clock.png">
+		<h4>Время</h4>
+		
+		</div>
+
+		<span id="clock"></span><span id="dayOfWeek"></span>
+		
+		
+		</div>
+		
+	</div>
+</body>
+</html>

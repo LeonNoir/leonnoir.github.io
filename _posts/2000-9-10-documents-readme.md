@@ -8,6 +8,8 @@ tags: documents
 
 по [регулярным выражениям в notepad++](/content/notepad/)
 
+по [ключам PsExec](/content/psexec/)
+
 по правилам в iptables
 
 по сетям в linux

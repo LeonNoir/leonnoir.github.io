@@ -18,9 +18,19 @@ hue-6-2: #c18401
 
 */
 
+@font-face {
+  font-family: "Consolas";
+  src: url("../fonts/Consolas.ttf");
+}
+
 .language-no-line-numbers table tr th:first-child {
 	display: none;
-	
+}
+
+.language-no-line-numbers table {
+	background-color: #000;
+	font-family: "Consolas";
+	color: #fff;
 }
 
 .dropdown {
