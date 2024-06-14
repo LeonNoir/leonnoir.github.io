@@ -87,7 +87,7 @@
 			{% if page.tag %}
 				<div class="left">{{ site.tags[page.tag] | size }} object(s)</div>
 			{% elsif page.layout == 'page' %}
-				<div class="left">чтобы вернуться назад нажмите назад</div>
+				<div class="left">{{page.url}}</div>
 			{% else %}
 				<div class="left">{{ site.tags | size }} object(s)</div>
 			{% endif %}
