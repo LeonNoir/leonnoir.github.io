@@ -7,7 +7,7 @@
 	<link rel="stylesheet" href="/assets/css/custom.css">
 	<link rel="stylesheet" href="/assets/css/atom-one-light.css">
     
-        <title>VHS</title>
+        <title>Шпаргалка по настройке сети в linux</title>
 		<link rel="stylesheet" type="text/css" href="/assets/css/002.css">
     
 	<link rel="stylesheet" href="/assets/css/font-awesome.min.css">
@@ -16,6 +16,18 @@
 	<script src="/assets/js/highlight.pack.js"></script>
 	<script src="/assets/js/clock.js"></script>
 	<script>hljs.initHighlightingOnLoad();</script>
+
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-0GZX3H860K"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+	
+	  gtag('config', 'G-0GZX3H860K');
+	</script>
+	<!-- Google tag (gtag.js) -->
+	
 </head>
 <body>
 	<div class="wrapper">
@@ -86,135 +98,130 @@ function changeColor(colorValue) {
 		</div>
 		<div class="post_list">
 			
-				<ul>
 				
 
+							<ul>
+								<li><a href="javascript:history.back()" title="Назад"><img src="/assets/img/back.png" title="ReadMe">Назад</a></li>
+							</ul>
 
-
-
-  
-  
-      	
-			<li><a href="/content/documents-readme" title="ReadMe"><img src="/assets/img/file.ico" title="ReadMe" />ReadMe</a></li>
-			
-  
-  
-      	
-			<li><a href="/content/documents-note-jekyll" title="Jekyll"><img src="/assets/img/file.ico" title="Jekyll" />Jekyll</a></li>
-			
-  
-  
-      	
-			<li><a href="/content/documents-note-python" title="Python"><img src="/assets/img/file.ico" title="Python" />Python</a></li>
-			
-  
-  
-      	
-			<li><a href="/content/documents-note-linux" title="Linux"><img src="/assets/img/file.ico" title="Linux" />Linux</a></li>
-			
-  
-  
-      	
-			<li><a href="/content/documents-note-vhs" title="VHS"><img src="/assets/img/file.ico" title="VHS" />VHS</a></li>
-			
-  
-
-	
-				</ul>
-		
+				
 			
 		</div>
 		<div class="post_total">
 			
+				<div class="left">/pages/linuxcfg/</div>
 			
-				
-				<div class="left">
-
-	
-				5 object(s)</div>
 			
-	
+			
+			
 			<div class="right">&nbsp;</div>
+			
+			
+			
 		</div>
 	</div>
 	
         <div class="content">
 			<div class="post_title">
+			
+				
+				<img src="/assets/img/file.png" />
 				
 				
-				
-				<img src="/assets/img/file.png" /> 
-				
-				
-				
-				<h1>VHS</h1>
+				<h1>Шпаргалка по настройке сети в linux</h1>
 				<a href="/"><div class="btn"><span class="fa fa-times"></span></div></a>
 				<div class="btn btn_max"><span class="fa fa-window-maximize"></span></div>
 				<div class="btn"><span class="fa fa-window-minimize"></span></div>
 			</div>
 			<ul class="topbar">
-				<li>September 12, 2000</li>
+				<li></li>
 			</ul>
 			<div class="post_content">
+        		<p>независимо от того какой линукс, всегда имеет смысл перед настройкой сети проверить какие у нас есть сетевые адаптеры</p>
 
-			
-				
-        		<h2 id="главные-принципы">Главные принципы</h2>
-<ul>
-  <li>Цифруем кассету в OBS предворительно убирая поля</li>
-  <li>через ависинт делаем деинтерлейс и, при необходимости, фильтруем</li>
-  <li>кидаем в виртуалдаб ависинт файл, убираем лишнее и кодируем</li>
-</ul>
+<p>смотрим какие есть сетевые интерфейсы</p>
 
-<h1 id="настройка-obs">Настройка OBS</h1>
+<p>команды</p>
 
-<h2 id="настройки--видео">настройки &gt; Видео</h2>
-<ul>
-  <li>Базовое (основа) разрешение: 720×576</li>
-  <li>Выходное (масштабированное) разрешение: 768×576 (или 720×576 но тогда в ависинте меняй)</li>
-  <li>Фильтр масштабирования: Бикубический (четкое масштабирование, 16 выборок)</li>
-  <li>Целое значение FPS: 50 (но возможно 25 будет лучше, надо проверить)</li>
-</ul>
+<pre><code class="language-no-line-numbers">ip a
+</code></pre>
 
-<h2 id="настройки--вывод--запись">настройки &gt; Вывод &gt; Запись</h2>
-<ul>
-  <li>формат контейнера: avi</li>
-  <li>Битрейт: 10 000 (рекомендуют 25 000)</li>
-  <li>Интервал ключевых кадров: 2</li>
-  <li>Кодировщик видео: huffyuv</li>
-  <li>Аудио битрейт: 320 Kbps</li>
-  <li>Кодировщик аудио: pcm_s16le</li>
-</ul>
+<pre><code class="language-no-line-numbers">ifconfig
+</code></pre>
 
-<h2 id="настройка-avisynth">Настройка Avisynth</h2>
-<p>мои мысли по .TomsMoComp(1,5, 1)</p>
+<h2 id="настройка-сети-в-ubuntu-20046-lts">настройка сети в Ubuntu 20.04.6 LTS</h2>
 
-<p>при значении .TomsMoComp(1,0, 1) - при 50 кадрах, кадры дублируются, может попробовать на 25 кадрах?</p>
+<p>конфиг тут:</p>
 
-<p>в целом, значение 0 лучше чем от 1 до 30. при этом я не вижу разницы, от 1 до 30 вообще.</p>
+<pre><code class="language-no-line-numbers">/etc/netplan/50-cloud-init.yaml
+</code></pre>
 
-<p>Пишут, что в реальности выше 15 не используют. Чем выше число, тем больше процессорного времени и артефактов.</p>
+<p>смотрим какие есть сетевые интерфейсы</p>
 
-<ul>
-  <li></li>
-  <li></li>
-  <li></li>
-</ul>
+<p>команда</p>
 
-<h2 id="настройка-кодеков">Настройка кодеков</h2>
-<ul>
-  <li></li>
-  <li></li>
-  <li></li>
-</ul>
+<pre><code class="language-no-line-numbers">ip a
+</code></pre>
+<p>вывод:</p>
 
-<h2 id="разное">Разное</h2>
+<pre><code class="language-no-line-numbers">1: lo: &lt;LOOPBACK,UP,LOWER_UP&gt; mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host
+       valid_lft forever preferred_lft forever
+2: eth0: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc mq state UP group default qlen 1000
+    link/ether 00:15:5d:d0:01:00 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.1.55/24 brd 192.168.1.255 scope global dynamic eth0
+       valid_lft 81438sec preferred_lft 81438sec
+    inet6 fe80::215:5dff:fed0:100/64 scope link
+       valid_lft forever preferred_lft forever
+</code></pre>
 
-<p>Спирт изопропиловый абсолютированный</p>
+<p>видим, что есть некий <strong>eth0</strong> его и вписываем в <strong>/etc/netplan/50-cloud-init.yaml</strong> к примеру так выглядит настройка <strong>eth0</strong> с включенным DHCP и <strong>ens224</strong> с статичным ip. Параметр <strong>optional: true</strong> позволяет избежать долгой загрузки ОС в некоторых случаях</p>
 
-<p>PAL_B
-PAL  is 720 x 576 pixels and has a refresh rate of 25 frames per second. 
-NTSC is 720 × 480 pixels</p>
+<pre><code class="language-no-line-numbers">network:
+    ethernets:
+#        enp0s3:
+        eth0:
+            dhcp4: true
+            optional: true
+           # addresses: [192.168.1.55/24, ]
+        ens224:
+            addresses: [192.168.1.77/24, ]
+    version: 2
+
+</code></pre>
+
+<h2 id="настройка-сети-в-centos-8">настройка сети в Centos 8</h2>
+
+<p>конфиг тут:</p>
+
+<pre><code class="language-no-line-numbers">nano /etc/sysconfig/network-scripts/ifcfg-ens32
+</code></pre>
+
+<p>содержание</p>
+
+<pre><code class="language-no-line-numbers">TYPE=Ethernet
+PROXY_METHOD=none
+BROWSER_ONLY=no
+BOOTPROTO=none
+DEFROUTE=yes
+IPV4_FAILURE_FATAL=no
+IPV6INIT=no
+IPV6_AUTOCONF=yes
+IPV6_DEFROUTE=yes
+IPV6_FAILURE_FATAL=no
+IPV6_ADDR_GEN_MODE=stable-privacy
+NAME=ens32
+UUID=3d0227d7-615f-4a25-ba56-db66822f0e0f
+DEVICE=ens32
+ONBOOT=yes
+IPADDR=192.168.1.55
+PREFIX=24
+
+</code></pre>
+
 
 				
 					<br>

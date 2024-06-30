@@ -11,6 +11,8 @@ tags: documents
 
 **по [ключам PsExec](/pages/psexec/)**
 
+**по [работе с виртуальными машинами](/pages/vtools/)** - Как импортировать .OVA файл образа в Hyper-V
+
 **по правилам в iptables**
 
-**по сетям в linux**
+**по [сетям в linux](/pages/linuxcfg/)**

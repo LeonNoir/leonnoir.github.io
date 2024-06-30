@@ -27,10 +27,15 @@ hue-6-2: #c18401
 	display: none;
 }
 
+pre:has(+ p) {
+		margin-top: -15px!important; 
+}
+
 .language-no-line-numbers table {
 	background-color: #000;
 	font-family: "Consolas";
 	color: #fff;
+	margin-bottom: 25px;
 }
 
 .dropdown {

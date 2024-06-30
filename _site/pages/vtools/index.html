@@ -7,8 +7,8 @@
 	<link rel="stylesheet" href="/assets/css/custom.css">
 	<link rel="stylesheet" href="/assets/css/atom-one-light.css">
     
-        <title>1042.ru</title>
-		<link rel="stylesheet" type="text/css" href="/assets/css/001.css">
+        <title>Шпаргалка по виртуалкам</title>
+		<link rel="stylesheet" type="text/css" href="/assets/css/002.css">
     
 	<link rel="stylesheet" href="/assets/css/font-awesome.min.css">
 	<link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
@@ -34,7 +34,7 @@
 		<div class="default_title">
 			<img src="/assets/img/mycomputer.png" />
 			
-				<h1>documents</h1>
+				<h1>1042.ru</h1>
 			
 		</div>
 		<style>
@@ -100,30 +100,16 @@ function changeColor(colorValue) {
 			
 				
 
-					<ul>
-	
-	
-		
-			<li><a href="/content/documents-readme" title="ReadMe"><img src="/assets/img/file.ico" title="ReadMe" />ReadMe</a></li>
-		
-			<li><a href="/content/documents-note-jekyll" title="Jekyll"><img src="/assets/img/file.ico" title="Jekyll" />Jekyll</a></li>
-		
-			<li><a href="/content/documents-note-python" title="Python"><img src="/assets/img/file.ico" title="Python" />Python</a></li>
-		
-			<li><a href="/content/documents-note-linux" title="Linux"><img src="/assets/img/file.ico" title="Linux" />Linux</a></li>
-		
-			<li><a href="/content/documents-note-vhs" title="VHS"><img src="/assets/img/file.ico" title="VHS" />VHS</a></li>
-		
-	
-	
-</ul>
-					
+							<ul>
+								<li><a href="javascript:history.back()" title="Назад"><img src="/assets/img/back.png" title="ReadMe">Назад</a></li>
+							</ul>
+
 				
 			
 		</div>
 		<div class="post_total">
 			
-				<div class="left">5 object(s)</div>
+				<div class="left">/pages/vtools/</div>
 			
 			
 			
@@ -135,6 +121,77 @@ function changeColor(colorValue) {
 		</div>
 	</div>
 	
+        <div class="content">
+			<div class="post_title">
+			
+				
+				<img src="/assets/img/file.png" />
+				
+				
+				<h1>Шпаргалка по виртуалкам</h1>
+				<a href="/"><div class="btn"><span class="fa fa-times"></span></div></a>
+				<div class="btn btn_max"><span class="fa fa-window-maximize"></span></div>
+				<div class="btn"><span class="fa fa-window-minimize"></span></div>
+			</div>
+			<ul class="topbar">
+				<li></li>
+			</ul>
+			<div class="post_content">
+        		<h1 id="как-импортировать-ova-файл-образа-в-hyper-v">Как импортировать .OVA файл образа в Hyper-V</h1>
+
+<h2 id="нам-нужно">нам нужно:</h2>
+
+<ul>
+  <li>сам OVA образ</li>
+  <li>архиватор 7zip</li>
+  <li>virtualbox (нужен его VBoxManage.exe который лежит обычно тут - C:\Program Files\Oracle\VirtualBox\VBoxManage.exe)</li>
+</ul>
+
+<h2 id="наши-действия">наши действия:</h2>
+
+<ul>
+  <li>распаковка .ova чтоб вытащить .vmdk</li>
+  <li>onvert .vmdk hard-drive to a .vhd</li>
+  <li>конвертируем .vmdk в .vhd командой:</li>
+</ul>
+
+<pre><code class="language-no-line-numbers">VBoxManage.exe clonehd "D:\МестоГдеЛежитФайл\redmine-disk001.vmdk" redmine.vhd --format vhd
+</code></pre>
+
+<ul>
+  <li>кладем получившийся redmine.vhd в папку с дисками Hyper-V (обычно тут - “C:\ProgramData\Microsoft\Windows\Virtual Hard Disks”)</li>
+  <li>создаём новую виртуальную машину</li>
+</ul>
+
+<p><img src="screen1.png" alt="Иллюстрация 1" /></p>
+<center>создаём</center>
+<p><br />
+<img src="screen2.png" alt="Иллюстрация 2" /></p>
+<center>называем</center>
+<p><br />
+<img src="screen3.png" alt="Иллюстрация 3" /></p>
+<center>выбираем поколение 1</center>
+<p><br />
+<img src="screen4.png" alt="Иллюстрация 4" /></p>
+<center>выделяем оперативку</center>
+<p><br />
+<img src="screen5.png" alt="Иллюстрация 5" /></p>
+<center>указываем наш диск .vhd</center>
+<p><br /></p>
+
+<p>Должно работать. Это решение мне было нужно, что бы на одной физической машине запустить Докер и Виртуал бокс, но в итоге использовал Hyper-V вместо этого</p>
+
+				
+					<br>
+<hr>
+<br>
+<ul class="donate">
+	<p> .... </p>
+</ul>
+				
+			</div>
+		</div>
+    
 	<script src="/assets/js/001.js"></script>
 	<script src="/assets/js/002.js"></script>
 	<div class="footer">

@@ -7,8 +7,8 @@
 	<link rel="stylesheet" href="/assets/css/custom.css">
 	<link rel="stylesheet" href="/assets/css/atom-one-light.css">
     
-        <title>1042.ru</title>
-		<link rel="stylesheet" type="text/css" href="/assets/css/001.css">
+        <title>Linux</title>
+		<link rel="stylesheet" type="text/css" href="/assets/css/002.css">
     
 	<link rel="stylesheet" href="/assets/css/font-awesome.min.css">
 	<link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
@@ -16,25 +16,13 @@
 	<script src="/assets/js/highlight.pack.js"></script>
 	<script src="/assets/js/clock.js"></script>
 	<script>hljs.initHighlightingOnLoad();</script>
-
-	<!-- Google tag (gtag.js) -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-0GZX3H860K"></script>
-	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
-	
-	  gtag('config', 'G-0GZX3H860K');
-	</script>
-	<!-- Google tag (gtag.js) -->
-	
 </head>
 <body>
 	<div class="wrapper">
 		<div class="default_title">
 			<img src="/assets/img/mycomputer.png" />
 			
-				<h1>documents</h1>
+				<h1>1042.ru</h1>
 			
 		</div>
 		<style>
@@ -98,43 +86,121 @@ function changeColor(colorValue) {
 		</div>
 		<div class="post_list">
 			
+				<ul>
 				
 
-					<ul>
-	
-	
-		
+
+
+
+  
+  
+      	
 			<li><a href="/content/documents-readme" title="ReadMe"><img src="/assets/img/file.ico" title="ReadMe" />ReadMe</a></li>
-		
+			
+  
+  
+      	
 			<li><a href="/content/documents-note-jekyll" title="Jekyll"><img src="/assets/img/file.ico" title="Jekyll" />Jekyll</a></li>
-		
+			
+  
+  
+      	
 			<li><a href="/content/documents-note-python" title="Python"><img src="/assets/img/file.ico" title="Python" />Python</a></li>
-		
+			
+  
+  
+      	
 			<li><a href="/content/documents-note-linux" title="Linux"><img src="/assets/img/file.ico" title="Linux" />Linux</a></li>
-		
+			
+  
+  
+      	
 			<li><a href="/content/documents-note-vhs" title="VHS"><img src="/assets/img/file.ico" title="VHS" />VHS</a></li>
+			
+  
+
+	
+				</ul>
 		
-	
-	
-</ul>
-					
-				
 			
 		</div>
 		<div class="post_total">
 			
-				<div class="left">5 object(s)</div>
 			
+				
+				<div class="left">
+
+	
+				5 object(s)</div>
 			
-			
-			
+	
 			<div class="right">&nbsp;</div>
-			
-			
-			
 		</div>
 	</div>
 	
+        <div class="content">
+			<div class="post_title">
+				
+				
+				
+				<img src="/assets/img/file.png" /> 
+				
+				
+				
+				<h1>Linux</h1>
+				<a href="/"><div class="btn"><span class="fa fa-times"></span></div></a>
+				<div class="btn btn_max"><span class="fa fa-window-maximize"></span></div>
+				<div class="btn"><span class="fa fa-window-minimize"></span></div>
+			</div>
+			<ul class="topbar">
+				<li>September 12, 2000</li>
+			</ul>
+			<div class="post_content">
+
+			
+				
+        		<h2 id="работа-с-screen">работа с screen</h2>
+
+<p>запустить с node в скрине c именем <strong>appNode</strong>, приложение <strong>app123.js</strong>  (удобно для скриптов автозапуска)</p>
+
+<pre><code class="language-no-line-numbers">screen -dmS appNode node path-to-folder/app123.js
+</code></pre>
+
+<p>отправить в скрин <strong>appNode</strong> команду от имени пользователя <strong>SomeUser</strong> (в примере случай, когда нужно было в консоль работающей программы отправить команду: <strong>stop</strong> и нажать enter: <strong>\015</strong></p>
+
+<pre><code class="language-no-line-numbers">sudo -u SomeUser screen -p 0 -S appNode -X eval 'stuff "stop"\015'
+</code></pre>
+
+<p>посмотреть какие скрины есть:</p>
+
+<pre><code class="language-no-line-numbers">screen -ls
+</code></pre>
+
+<p>подключиться к скрину c именем <strong>appNode</strong>:</p>
+
+<pre><code class="language-no-line-numbers">screen -r appNode
+</code></pre>
+
+<p>выйти из скрина, не уничтожая его</p>
+
+<pre><code class="language-no-line-numbers">ctrl+A, ctrl+D
+</code></pre>
+
+<h2 id="настройка-сети">настройка сети</h2>
+
+<p><strong>по настройке сети <a href="/pages/linuxcfg/">более подробно</a></strong></p>
+
+				
+					<br>
+<hr>
+<br>
+<ul class="donate">
+	<p> .... </p>
+</ul>
+				
+			</div>
+		</div>
+    
 	<script src="/assets/js/001.js"></script>
 	<script src="/assets/js/002.js"></script>
 	<div class="footer">
