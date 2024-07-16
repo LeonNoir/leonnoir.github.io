@@ -1,0 +1,20 @@
+	<script>
+			function initOnLoad(fn) {
+			  var readyState = document.readyState
+			  if(readyState === 'interactive' || readyState === 'complete') {
+				return fn()
+			  }
+			  window.addEventListener('DOMContentLoaded', fn)
+			  }
+			initOnLoad(function() {
+			  clockTimer();
+			})
+	</script>
+	
+	<div class="clockpage">
+	<div class="clock_title">
+	<img src="/assets/img/64-64-clock.png">
+	<h4>Время</h4>
+	</div>
+	<span id="clock"></span><span id="dayOfWeek"></span>
+	</div>

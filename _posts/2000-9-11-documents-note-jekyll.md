@@ -21,3 +21,7 @@ tags: documents
 
 ## Набор иконок для дизайна
 - Набор [oldwindowsicons.tumblr.com](https://oldwindowsicons.tumblr.com/tagged/windows)
+
+- Набор2 [𝕎𝕚𝕟𝕕𝕠𝕨𝕤 𝟡𝟝 +𝓟𝓛𝓤𝓢+ Icon Pack #1](https://aconfuseddragon.itch.io/windows-95-plus-2)
+
+

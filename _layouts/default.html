@@ -18,6 +18,7 @@
 	<link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
 	<script src="/assets/js/highlight.pack.js"></script>
 	<script src="/assets/js/clock.js"></script>
+	<script src="/assets/js/typed.umd.js"></script>
 	<script>hljs.initHighlightingOnLoad();</script>
 
 	<!-- Google tag (gtag.js) -->
@@ -132,32 +133,20 @@
 	<script src="/assets/js/002.js"></script>
 	<div class="footer">
 	
-	<script>
-			function initOnLoad(fn) {
-			  var readyState = document.readyState
-			  if(readyState === 'interactive' || readyState === 'complete') {
-				return fn()
-			  }
-			  window.addEventListener('DOMContentLoaded', fn)
-			  }
-			initOnLoad(function() {
-			  clockTimer();
-			})
-	</script>
-		
-		<div class="clockpage">
-		<div class="clock_title">
-		
-		<img src="/assets/img/64-64-clock.png">
-		<h4>Время</h4>
-		
-		</div>
-
-		<span id="clock"></span><span id="dayOfWeek"></span>
-		
-		
-		</div>
+		{% include console.html %}
+		{% include clock.html %}
 		
 	</div>
+	
+	  <script>
+		var typed = new Typed("#typed", {
+		  stringsElement: "#console",
+		  backSpeed: 10,
+		  typeSpeed: 30,
+		  backDelay: 1000,
+		  loop: true,
+		  smartBackspace: true,
+		});
+  </script>
 </body>
 </html>

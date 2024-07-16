@@ -1,0 +1,23 @@
+	<div class="console">
+	<div class="post_title">
+	
+	<img src="/assets/img/icos/cmd.png">
+
+	
+	<span id="console">			
+		{% for pair in site.data.json %}
+		{% if pair.typed -%}
+		{% for value in pair.value -%}
+		<span>{{ value }}</span>
+		{%- endfor %}		
+	</span>
+
+{{ quote_key }}<span class="key">{{ pair.key }}</span>{{ quote_key }}:
+{{ quote_value }}<span class="value"><span id="typed">.|\.</span></span>{{ quote_value }}
+{%- endif -%}
+{%- unless forloop.last -%}
+{%- endunless %}
+{% endfor %}
+
+	</div>
+	</div>
