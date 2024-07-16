@@ -251,10 +251,8 @@ Windows 95 предназначалась в основном для домаш�
 	
 			<div class="console">
 	<div class="post_title">
-	
 	<img src="/assets/img/icos/cmd.png">
 
-	
 	<span id="console">			
 		
 		<span>Слушай, давай я тебе спою чего-нибудь?</span><span>Ну вот, а песня такая, про цирк.</span><span>Называется «Зеленый слоник».</span><span>И там… Ну… Я сейчас быстро спою</span><span>ну просто когда тебя увели, я эту песню сочинил.</span><span>Там, значит, аккорды первые такие</span><span>Там! Та-тарам-тара-там! Та-тара-тара-там-трататара-тара-там, та-та!</span>		
@@ -266,6 +264,17 @@ Windows 95 предназначалась в основном для домаш�
 
 	</div>
 	</div>
+	
+	<script>
+		var typed = new Typed("#typed", {
+		  stringsElement: "#console",
+		  backSpeed: 10,
+		  typeSpeed: 30,
+		  backDelay: 1000,
+		  loop: true,
+		  smartBackspace: true,
+		});
+	</script>
 			<script>
 			function initOnLoad(fn) {
 			  var readyState = document.readyState
@@ -288,16 +297,5 @@ Windows 95 предназначалась в основном для домаш�
 	</div>
 		
 	</div>
-	
-	  <script>
-		var typed = new Typed("#typed", {
-		  stringsElement: "#console",
-		  backSpeed: 10,
-		  typeSpeed: 30,
-		  backDelay: 1000,
-		  loop: true,
-		  smartBackspace: true,
-		});
-  </script>
 </body>
 </html>
