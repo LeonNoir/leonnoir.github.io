@@ -63,6 +63,7 @@ function changeColor(colorValue) {
 	<div class="dropdown">
 	<a><li><u>И</u>збранное</li></a>
 		<div class="dropdown-content">
+		<a class="fav-links" href="http://amiai.ru" target="_blank"><div>Нейродруг Ами</div></a>
 		<a class="fav-links" href="http://ji1.ru" target="_blank"><div>Сервис коротких ссылок</div></a>
 		<a class="fav-links" href="http://freecraft.ru" target="_blank"><div>Майнкрафт Сервер</div></a>
 		<a class="fav-links" href="http://tvnw.ru" target="_blank"><div>Оцифровка VHS спб</div></a>
@@ -155,13 +156,14 @@ function changeColor(colorValue) {
 	<div class="footer">
 	
 			<div class="console wrapper">
-		<div class="console_title">
+		<div class="console_title post_title" id="oops1">
 		<img src="/assets/img/icos/cmd.png">
-		<h1>Administrator: Command Promt</h1>
+		<h1 id="oops0">Administrator: Command Promt</h1> <h1 id="oops2"></h1>
+		<a href="#" onclick="oopsF()"><div class="btn"><span class="fa fa-times"></span></div></a>
 		</div>
 	
 		<div class="console_body">
-		
+
 		<span>C:\WINDOWS\system42>run CoolStory.exe</span><br>
 		<span>......</span><br>
 		<span>.....</span><br>
@@ -175,7 +177,7 @@ function changeColor(colorValue) {
 
 		<span id="runline">			
 		
-		<span>Слушай, давай я тебе спою чего-нибудь?</span><span>Ну вот, а песня такая, про цирк.</span><span>Называется «Зеленый слоник».</span><span>И там… Ну… Я сейчас быстро спою</span><span>ну просто когда тебя увели, я эту песню сочинил.</span><span>Там, значит, аккорды первые такие</span><span>Там! Та-тарам-тара-там! Та-тара-тара-там-трататара-тара-там, та-та!</span>		
+		<span>Слушай, давай я тебе спою чего-нибудь?</span><span>Ну вот, а песня такая, про цирк.</span><span>Называется «Зеленый слоник».</span><span>И там… Ну… Я сейчас быстро спою</span><span>ну просто когда тебя увели, я эту песню сочинил.</span><span>Там, значит, аккорды первые такие</span><span>Там! Та-тарам-тара-там! Та-тара-тара-там-трататара-тара-там, та-та!</span><span>Я на лошади. Ты на белом коне, и я на белом коне.</span><span>А потом на бал. А потом салют… в нашу честь.</span><span>Салют в нашу честь. Сначала на парад, а потом в дом офицеров пойдём.</span><span>Бал будет. Пиво. Салют. В мою честь салют.</span><span>Я полковник и ты — на белом коне.</span><span>Ты меня слышишь? Посмотри, какая у меня форма!</span><span>Посмотри, какие у неё звезды!</span><span>Я её ещё никому не показывал. Только тебе покажу. Посмотри!</span><span>Это моя парадная. Специально сшил! Посмотри, не бойся!</span><span>Погоны? Я их поменяю! Вот они, погоны. Вот! Настоящие! Видишь?</span><span>Полковник. Я полковник. Я их на парад надену.</span><span>Это моя форма. Самая чистая. Что ты кашляешь?</span><span>Вот пойдём в дом офицеров, пива выпьем — и кашлять не будешь.</span><span>Я с кортиком, на белом коне, командую парадом! Я полковник!</span><span>Я командую парадом! Я в звёздах!</span><span>На белом коне! Я полковник! Я командую парадом!</span>		
 		</span>
 			<span class="key">C:\></span>
 			<span class="value"><span id="typed">.|\.</span></span>
@@ -184,6 +186,14 @@ function changeColor(colorValue) {
 		
 	
 	</div>
+	
+	<script>
+		function oopsF() {
+		document.getElementById("oops0").remove();
+		document.getElementById('oops1').style.cssText = 'background-color: gray; color: white;';
+		document.getElementById('oops2').innerHTML = 'не отвечает...';
+}
+	</script>
 	
 	<script>
 		var typed = new Typed("#typed", {

@@ -1,11 +1,12 @@
 	<div class="console wrapper">
-		<div class="console_title">
+		<div class="console_title post_title" id="oops1">
 		<img src="/assets/img/icos/cmd.png">
-		<h1>Administrator: Command Promt</h1>
+		<h1 id="oops0">Administrator: Command Promt</h1> <h1 id="oops2"></h1>
+		<a href="#" onclick="oopsF()"><div class="btn"><span class="fa fa-times"></span></div></a>
 		</div>
 	
 		<div class="console_body">
-		
+
 		<span>C:\WINDOWS\system42>run CoolStory.exe</span><br>
 		<span>......</span><br>
 		<span>.....</span><br>
@@ -33,6 +34,14 @@
 		
 	
 	</div>
+	
+	<script>
+		function oopsF() {
+		document.getElementById("oops0").remove();
+		document.getElementById('oops1').style.cssText = 'background-color: gray; color: white;';
+		document.getElementById('oops2').innerHTML = 'не отвечает...';
+}
+	</script>
 	
 	<script>
 		var typed = new Typed("#typed", {

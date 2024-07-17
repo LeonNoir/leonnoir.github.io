@@ -27,6 +27,7 @@ hue-6-2: #c18401
 	background: #000;
 	color: #fff;
 	font-family: "Consolas";
+	padding: 5px 2px;
 }
 .console_body span{
 
