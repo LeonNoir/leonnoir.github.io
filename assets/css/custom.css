@@ -25,10 +25,11 @@ hue-6-2: #c18401
 }
 .console_body {
 	background: #000;
-}
-.console_body span{
 	color: #fff;
 	font-family: "Consolas";
+}
+.console_body span{
+
 }
 .console.wrapper {
 
