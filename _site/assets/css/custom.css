@@ -18,7 +18,19 @@ hue-6-2: #c18401
 
 */
 
-.console {
+
+.console_title {
+	background: #00007f;
+	font-family: "Consolas";
+}
+.console_body {
+	background: #000;
+}
+.console_body span{
+	color: #fff;
+	font-family: "Consolas";
+}
+.console.wrapper {
 
 	margin: auto;
 	margin-top: 20px;
@@ -26,7 +38,6 @@ hue-6-2: #c18401
 	border: 2px solid;
 	border-color: #fff8ff #000000 #000000 #fff8ff;
 	padding: 2px 0;
-	font-family: "Consolas";
 }
 
 @font-face {

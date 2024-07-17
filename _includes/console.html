@@ -1,28 +1,33 @@
-	<div class="console">
-	<div class="post_title">
-	<img src="/assets/img/icos/cmd.png">
+	<div class="console wrapper">
+		<div class="console_title">
+		<img src="/assets/img/icos/cmd.png">
+		<h1>C:\WINDOWS\System42\cmd.exe</h1>
+		</div>
+	
+		<div class="console_body">
 
-	<span id="console">			
+		<span id="cons">			
 		{% for pair in site.data.json %}
 		{% if pair.typed -%}
-		{% for value in pair.value -%}
-		<span>{{ value }}</span>
-		{%- endfor %}		
-	</span>
+			{% for value in pair.value -%}
+			<span>{{ value }}</span>
+			{%- endfor %}		
+			</span>
 
-{{ quote_key }}<span class="key">{{ pair.key }}</span>{{ quote_key }}:
-{{ quote_value }}<span class="value"><span id="typed">.|\.</span></span>{{ quote_value }}
-{%- endif -%}
-{%- unless forloop.last -%}
-{%- endunless %}
-{% endfor %}
+			{{ quote_key }}<span class="key">{{ pair.key }}</span>{{ quote_key }}
+			{{ quote_value }}<span class="value"><span id="typed">.|\.</span></span>{{ quote_value }}
+		{%- endif -%}
 
-	</div>
+		{% endfor %}
+
+		</div>
+		
+	
 	</div>
 	
 	<script>
 		var typed = new Typed("#typed", {
-		  stringsElement: "#console",
+		  stringsElement: "#cons",
 		  backSpeed: 10,
 		  typeSpeed: 30,
 		  backDelay: 1000,
