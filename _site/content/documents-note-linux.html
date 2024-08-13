@@ -162,34 +162,11 @@ function changeColor(colorValue) {
 				
         		<h2 id="работа-с-screen">работа с screen</h2>
 
-<p>запустить с node в скрине c именем <strong>appNode</strong>, приложение <strong>app123.js</strong>  (удобно для скриптов автозапуска)</p>
-
-<pre><code class="language-no-line-numbers">screen -dmS appNode node path-to-folder/app123.js
-</code></pre>
-
-<p>отправить в скрин <strong>appNode</strong> команду от имени пользователя <strong>SomeUser</strong> (в примере случай, когда нужно было в консоль работающей программы отправить команду: <strong>stop</strong> и нажать enter: <strong>\015</strong></p>
-
-<pre><code class="language-no-line-numbers">sudo -u SomeUser screen -p 0 -S appNode -X eval 'stuff "stop"\015'
-</code></pre>
-
-<p>посмотреть какие скрины есть:</p>
-
-<pre><code class="language-no-line-numbers">screen -ls
-</code></pre>
-
-<p>подключиться к скрину c именем <strong>appNode</strong>:</p>
-
-<pre><code class="language-no-line-numbers">screen -r appNode
-</code></pre>
-
-<p>выйти из скрина, не уничтожая его</p>
-
-<pre><code class="language-no-line-numbers">ctrl+A, ctrl+D
-</code></pre>
+<p><strong>особенности screen <a href="/pages/linuxcfg-app-screen/">более подробно</a></strong></p>
 
 <h2 id="настройка-сети">настройка сети</h2>
 
-<p><strong>по настройке сети <a href="/pages/linuxcfg/">более подробно</a></strong></p>
+<p><strong>по настройке сети <a href="/pages/linuxcfg-network/">более подробно</a></strong></p>
 
 				
 					<br>

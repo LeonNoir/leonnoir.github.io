@@ -85,3 +85,18 @@ PREFIX=24
 
 ```
 
+## поднять\опустить интерфейс
+
+используя "ip"
+
+```no-line-numbers
+# ip link set dev eth0 up
+# ip link set dev eth0 down
+```
+
+используя "ifconfig"
+
+```no-line-numbers
+# /sbin/ifconfig eth0 up
+# /sbin/ifconfig eth0 down
+```
