@@ -3,10 +3,14 @@ layout: post
 title: "Linux"
 tags: documents
 ---
-## работа с screen
+## [работа с screen](/pages/linuxcfg-app-screen/)
 
-**особенности screen [более подробно](/pages/linuxcfg-app-screen/)**
+**примеры работы утилиты screen**
 
-## настройка сети
+## [настройка сети](/pages/linuxcfg-network/)
 
-**по настройке сети [более подробно](/pages/linuxcfg-network/)**
+**настройка ip адреса в разных дистрибутивах линукс**
+
+## [мониторинг сети](/pages/linux-network-mon/)
+
+**просмотр открытых портов итд**
