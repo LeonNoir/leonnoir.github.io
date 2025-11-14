@@ -5,6 +5,26 @@ title: Шпаргалка по настройке сети в linux
 
 независимо от того какой линукс, всегда имеет смысл перед настройкой сети проверить какие у нас есть сетевые адаптеры, смотрим какие есть сетевые интерфейсы с помощю **ip a** или **ifconfig**
 
+## настройка сети в Debian 13
+
+юнит
+
+```no-line-numbers
+sudo systemctl status networking
+```
+
+конфиг тут:
+
+```no-line-numbers
+sudo nano /etc/network/interfaces
+```
+
+dns тут:
+
+```no-line-numbers
+nano /etc/resolv.conf
+```
+
 ## настройка сети в Ubuntu 20.04.6 LTS
 
 конфиг тут:
