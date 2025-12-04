@@ -7,6 +7,24 @@ title: Шпаргалка по настройке сети в linux
 
 ## основа
 
+### ip
+
+```no-line-numbers
+# ip a add {ip_addr/mask} dev {interface}
+# ip route add default via <gateway_ip_address> dev <interface_name>
+# ip route replace default via <gateway_ip_address> dev <interface_name>
+```
+
+днс
+
+```no-line-numbers
+nano /etc/resolv.conf
+```
+
+```no-line-numbers
+nameserver 8.8.8.8
+```
+
 ### поднять\опустить интерфейс
 
 используя "ip"
