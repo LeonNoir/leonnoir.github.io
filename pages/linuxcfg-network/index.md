@@ -11,6 +11,11 @@ title: Шпаргалка по настройке сети в linux
 
 ```no-line-numbers
 # ip a add <ip_addr/mask> dev <interface>
+```
+
+маршрут
+
+```no-line-numbers
 # ip route add default via <gateway_ip_address> dev <interface>
 # ip route replace default via <gateway_ip_address> dev <interface>
 ```
