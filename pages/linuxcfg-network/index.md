@@ -10,9 +10,9 @@ title: Шпаргалка по настройке сети в linux
 ### ip
 
 ```no-line-numbers
-# ip a add {ip_addr/mask} dev {interface}
-# ip route add default via <gateway_ip_address> dev <interface_name>
-# ip route replace default via <gateway_ip_address> dev <interface_name>
+# ip a add <ip_addr/mask> dev <interface>
+# ip route add default via <gateway_ip_address> dev <interface>
+# ip route replace default via <gateway_ip_address> dev <interface>
 ```
 
 днс
