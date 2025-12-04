@@ -7,7 +7,7 @@ title: Шпаргалка по настройке сети в linux
 
 ## основа
 
-### ip
+ip
 
 ```no-line-numbers
 # ip a add <ip_addr/mask> dev <interface>
@@ -28,6 +28,19 @@ nano /etc/resolv.conf
 
 ```no-line-numbers
 nameserver 8.8.8.8
+```
+
+время
+
+```no-line-numbers
+systemctl status systemd-timesyncd
+systemctl status chrony
+systemctl status ntpd
+
+```
+
+```no-line-numbers
+timedatectl set-timezone Europe/Moscow
 ```
 
 ### поднять\опустить интерфейс
