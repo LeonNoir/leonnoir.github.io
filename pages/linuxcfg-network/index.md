@@ -5,6 +5,29 @@ title: Шпаргалка по настройке сети в linux
 
 независимо от того какой линукс, всегда имеет смысл перед настройкой сети проверить какие у нас есть сетевые адаптеры, смотрим какие есть сетевые интерфейсы с помощю **ip a** или **ifconfig**
 
+## основа
+
+### поднять\опустить интерфейс
+
+используя "ip"
+
+```no-line-numbers
+# ip link set dev eth0 up
+# ip link set dev eth0 down
+```
+
+используя "ifconfig"
+
+```no-line-numbers
+# /sbin/ifconfig eth0 up
+# /sbin/ifconfig eth0 down
+```
+
+
+
+
+## - - - Конфиги - - -
+
 ## настройка сети в Debian 13
 
 юнит
@@ -105,18 +128,6 @@ PREFIX=24
 
 ```
 
-## поднять\опустить интерфейс
 
-используя "ip"
 
-```no-line-numbers
-# ip link set dev eth0 up
-# ip link set dev eth0 down
-```
 
-используя "ifconfig"
-
-```no-line-numbers
-# /sbin/ifconfig eth0 up
-# /sbin/ifconfig eth0 down
-```
