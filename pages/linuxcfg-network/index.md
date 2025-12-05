@@ -10,6 +10,8 @@ ip r    #проверить какой шлюз
 ip a add <ip_addr/mask> dev <interface>    #временно добавляет IP
 ip route add default via <gw_ip> dev <interface>        #временно добавляет дефолтный маршрут
 ip route replace default via <gw_ip> dev <interface>    #временно заменяет дефолтный маршрут
+ip link set dev <interface> up    # поднять интерфейс
+ip link set dev <interface> down  # опустить интерфейс
 
 ```
 
@@ -26,8 +28,8 @@ nameserver 8.8.8.8
 время
 
 ```no-line-numbers
+systemctl status chrony # на момент лучшее решение
 systemctl status systemd-timesyncd
-systemctl status chrony
 systemctl status ntpd
 
 ```
