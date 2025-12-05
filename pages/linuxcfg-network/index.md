@@ -8,8 +8,8 @@ title: Шпаргалка по настройке сети в linux
 ip a    #проверить какой ip
 ip r    #проверить какой шлюз
 ip a add <ip_addr/mask> dev <interface>    #временно добавляет IP
-ip route add default via <gateway_ip_address> dev <interface>        #временно добавляет дефолтный маршрут
-ip route replace default via <gateway_ip_address> dev <interface>    #временно заменяет дефолтный маршрут
+ip route add default via <gw_ip> dev <interface>        #временно добавляет дефолтный маршрут
+ip route replace default via <gw_ip> dev <interface>    #временно заменяет дефолтный маршрут
 
 ```
 
