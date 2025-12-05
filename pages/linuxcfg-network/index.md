@@ -3,25 +3,14 @@ layout: page
 title: Шпаргалка по настройке сети в linux
 ---
 
-база
+## база
 ```no-line-numbers
 ip a    #проверить какой ip
 ip r    #проверить какой шлюз
-```
+ip a add <ip_addr/mask> dev <interface>    #временно добавляет IP
+ip route add default via <gateway_ip_address> dev <interface>        #временно добавляет дефолтный маршрут
+ip route replace default via <gateway_ip_address> dev <interface>    #временно заменяет дефолтный маршрут
 
-## основа
-
-ip
-
-```no-line-numbers
-# ip a add <ip_addr/mask> dev <interface>
-```
-
-маршрут
-
-```no-line-numbers
-# ip route add default via <gateway_ip_address> dev <interface>
-# ip route replace default via <gateway_ip_address> dev <interface>
 ```
 
 днс
