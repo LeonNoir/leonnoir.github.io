@@ -1,0 +1,16 @@
+---
+layout: post
+title: "Proxmox"
+tags: documents
+---
+## [работа с screen](/pages/proxmox/)
+
+**примеры работы утилиты screen**
+
+## [настройка сети](/pages/linuxcfg-network/)
+
+**настройка ip адреса в разных дистрибутивах линукс**
+
+## [мониторинг сети](/pages/linux-network-mon/)
+
+**просмотр открытых портов итд**
