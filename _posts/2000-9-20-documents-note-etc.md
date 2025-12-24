@@ -64,3 +64,6 @@ tags: documents
 http://fixwifi.it/ (универсальный ресурс для вызова страницы авторизации).
 http://captive.apple.com (особенно эффективно для macOS).
 http://neverssl.com (сайт без шифрования, который легко перехватывается
+
+# смена раскладки linux (когда хочешь нажать Yes но можешь только Да)
+sudo localectl set-keymap us
