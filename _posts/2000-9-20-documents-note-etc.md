@@ -51,7 +51,11 @@ tags: documents
 
 # nmcli полезные команды
 - nmcli device wifi list
-- nmcli device wifi connect "YourNetworkSSID" password "YourPassword"
+- nmcli device wifi connect "YourSSID" password "YourPassword"  #
+- nmcli device wifi connect "YourSSID" --ask                    # более секьюрно
+
+- nmcli connection show
+- nmcli connection delete "YourSSID"
 
 - Подключение к сети:  nmcli device wifi connect "SSID" password "пароль"
 - Обновить список сетей:  nmcli device wifi rescan
