@@ -72,3 +72,6 @@ http://neverssl.com (сайт без шифрования, который лег
 
 # смена раскладки linux (когда хочешь нажать Yes но можешь только Да)
 sudo localectl set-keymap us
+
+# удалить историю (только текущую)
+history -c && history -w
