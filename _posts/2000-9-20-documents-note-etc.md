@@ -96,19 +96,23 @@ deb-src http://security.debian.org/debian-security trixie-security main non-free
 deb http://deb.debian.org/debian/ trixie-updates main non-free-firmware
 deb-src http://deb.debian.org/debian/ trixie-updates main non-free-firmware
 
-#DEB8
+DEB8
 deb http://archive.debian.org/debian/ jessie main contrib non-free
 ```
+
 # sudo
 ```no-line-numbers
 apt install sudo
 usermod -aG sudo имя_вашего_пользователя
 ```
+
 # ssh
 ```no-line-numbers
 apt install openssh-server
 # по умолчанию root не может подключится но всегда проверяй
 ```
+
+
 
 
 ---
