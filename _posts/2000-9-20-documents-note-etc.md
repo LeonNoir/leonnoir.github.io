@@ -77,6 +77,15 @@ sudo localectl set-keymap us
 history -c && history -w
 
 # Репозитории
+```no-line-numbers
+DEB12
+# Debian Main Repositories
+deb http://deb.debian.org/debian/ bookworm main contrib non-free-firmware
+# Debian Security Updates
+deb http://security.debian.org/debian-security bookworm-security main contrib non-free-firmware
+# Debian Updates
+deb http://deb.debian.org/debian/ bookworm-updates main contrib non-free-firmware
+
 DEB13
 deb http://deb.debian.org/debian/ trixie main non-free-firmware
 deb-src http://deb.debian.org/debian/ trixie main non-free-firmware
@@ -86,3 +95,9 @@ deb-src http://security.debian.org/debian-security trixie-security main non-free
 # see https://www.debian.org/doc/manuals/debian-reference/ch02.en.html#_updates_and_backports
 deb http://deb.debian.org/debian/ trixie-updates main non-free-firmware
 deb-src http://deb.debian.org/debian/ trixie-updates main non-free-firmware
+
+#DEB8
+deb http://archive.debian.org/debian/ jessie main contrib non-free
+```
+
+
