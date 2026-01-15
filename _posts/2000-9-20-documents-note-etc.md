@@ -104,6 +104,12 @@ deb http://archive.debian.org/debian/ jessie main contrib non-free
 apt install sudo
 usermod -aG sudo имя_вашего_пользователя
 ```
+# ssh
+```no-line-numbers
+apt install openssh-server
+# по умолчанию root не может подключится но всегда проверяй
+```
+
 
 ---
 ```no-line-numbers
