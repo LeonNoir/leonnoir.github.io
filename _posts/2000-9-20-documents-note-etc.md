@@ -99,5 +99,12 @@ deb-src http://deb.debian.org/debian/ trixie-updates main non-free-firmware
 #DEB8
 deb http://archive.debian.org/debian/ jessie main contrib non-free
 ```
+# sudo
+```no-line-numbers
+apt install sudo
+usermod -aG sudo имя_вашего_пользователя
+```
 
-
+---
+```no-line-numbers
+```
