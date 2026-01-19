@@ -112,8 +112,10 @@ apt install openssh-server
 # по умолчанию root не может подключится но всегда проверяй
 ```
 
-
-
+# Проверка неожиданных выключений при загрузке
+```no-line-numbers
+sudo journalctl -b -1 | grep -i "kernel panic\|segfault\|oom\|hard reset"
+```
 
 ---
 ```no-line-numbers
