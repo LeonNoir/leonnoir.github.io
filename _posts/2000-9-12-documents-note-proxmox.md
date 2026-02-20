@@ -15,6 +15,7 @@ tags: documents
 создаём новую ВМ (получает к примеру 137)
 дисков не даём
 далее пиздим диск, в нашем случае это было на горячую:
+
 ```no-line-numbers
 qm importdisk 137 /mnt/pve/SOME-NAS/images/142/vm-142-disk-0.qcow2 SOME-NFS --format qcow2
 ```
