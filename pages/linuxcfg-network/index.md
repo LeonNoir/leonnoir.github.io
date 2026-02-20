@@ -29,6 +29,7 @@ nameserver 8.8.8.8
 
 ```no-line-numbers
 systemctl status chrony # на момент лучшее решение
+systemctl status chronyd.service  # redos8
 systemctl status systemd-timesyncd
 systemctl status ntpd
 
