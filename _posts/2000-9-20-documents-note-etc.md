@@ -203,6 +203,13 @@ tar -xjf имя_архива.tar.bz2
 tar -xjf имя_архива.tar.bz2 -C /путь/к/папке/ 
 ```
 
+# Windows GPO
+
+## Выводит список всех GPO домена с датами их создания и изменения, сортируя по самым новым.
+```no-line-numbers
+Get-GPO -All | Select-Object DisplayName, CreationTime, ModificationTime | Sort-Object ModificationTime -Descending
+```
+
 ---
 ```no-line-numbers
 ```
