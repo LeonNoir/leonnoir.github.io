@@ -14,3 +14,6 @@ tags: documents
 ## [мониторинг сети](/pages/linux-network-mon/)
 
 **просмотр открытых портов итд**
+
+## [ссылки, симлинки](/pages/linux-links/)
+
