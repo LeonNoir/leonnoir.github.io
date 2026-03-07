@@ -187,7 +187,7 @@ iface eth1 inet static
     dns-nameservers 8.8.8.8 8.8.4.4
 
 #Опции
-#mtu 1500
+#mtu 1500                #позволяет задать максимальный размер пакета    
 ```
 
 ### auto vs allow-hotplug 
