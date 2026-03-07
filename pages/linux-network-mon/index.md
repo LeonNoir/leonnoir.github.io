@@ -8,7 +8,7 @@ title: мониторинг сети в linux
 # SS
 
 ```no-line-numbers
-ss -tpln
+ss -tulnp
 ```
 (Флаги: t — TCP, u — UDP, l — только слушающие, n — цифрами вместо имен, p — показать процесс/PID)
 
