@@ -5,7 +5,7 @@ title: мониторинг сети в linux
 
 описание разных програм для мониторинга сети в линукс
 
-# SS
+# SS + ps -fp
 
 ```no-line-numbers
 ss -tulnp
