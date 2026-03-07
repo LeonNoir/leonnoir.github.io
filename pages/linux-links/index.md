@@ -1,3 +1,8 @@
+---
+layout: page
+title: ссылки в linux
+---
+
 # Основные способы создания ссылок в Linux
 
 ## Символическая ссылка (Symlink / Soft link)
