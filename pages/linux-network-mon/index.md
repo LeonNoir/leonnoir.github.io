@@ -12,7 +12,15 @@ ss -tpln
 ```
 (Флаги: t — TCP, u — UDP, l — только слушающие, n — цифрами вместо имен, p — показать процесс/PID)
 
+```no-line-numbers
+ss -tpln
+tcp      LISTEN      0      100      0.0.0.0:25        0.0.0.0:*      users:(("master",pid=1745,fd=13))
 
+ps -fp 1745
+UID          PID    PPID  C STIME TTY          TIME CMD
+root        1745       1  0 янв26 ?     00:01:08 /usr/lib/postfix/sbin/master -w
+```
+(ps -fp позволит увидеть какое приложение открыло порт)
 
 
 
