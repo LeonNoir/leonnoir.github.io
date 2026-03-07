@@ -171,26 +171,28 @@ sudo nano /etc/network/interfaces
 пример:
 
 ```no-line-numbers
-# Файл /etc/network/interfaces
-
-# Петлевой интерфейс (обязательно)
 auto lo
 iface lo inet loopback
 
-# Основной интерфейс - получение IP по DHCP
-auto eth0
+#DHCP
+auto eth0                #или allow-hotplug 
 iface eth0 inet dhcp
 
-# Второй интерфейс - статический IP
-auto eth1
+#STATIC
+auto eth1                #или allow-hotplug
 iface eth1 inet static
     address 192.168.1.10
     netmask 255.255.255.0
     gateway 192.168.1.1
     dns-nameservers 8.8.8.8 8.8.4.4
+
+#Опции
+#mtu 1500
 ```
 
-
+### auto vs allow-hotplug 
+auto: "Пытайся поднять сеть, пока грузишься, мы подождем".
+allow-hotplug: "Не жди сеть, загружайся быстрее, поднимешь по факту подключения железки".
 
 
 
