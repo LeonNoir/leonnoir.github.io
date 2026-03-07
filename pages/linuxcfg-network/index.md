@@ -160,6 +160,38 @@ PREFIX=24
 
 ```
 
+## сетевой менеджер №1
+
+корфиг:
+
+```no-line-numbers
+sudo nano /etc/network/interfaces
+```
+
+пример:
+
+```no-line-numbers
+# Файл /etc/network/interfaces
+
+# Петлевой интерфейс (обязательно)
+auto lo
+iface lo inet loopback
+
+# Основной интерфейс - получение IP по DHCP
+auto eth0
+iface eth0 inet dhcp
+
+# Второй интерфейс - статический IP
+auto eth1
+iface eth1 inet static
+    address 192.168.1.10
+    netmask 255.255.255.0
+    gateway 192.168.1.1
+    dns-nameservers 8.8.8.8 8.8.4.4
+```
+
+
+
 
 
 
