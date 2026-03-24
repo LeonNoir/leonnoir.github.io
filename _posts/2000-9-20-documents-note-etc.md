@@ -23,7 +23,7 @@ tags: documents
 # docker (УСТАНОВКА на 13 debian)
 
 СТАВИМ DOCKER, ниже чистая установка
-# Add Docker's official GPG key:
+### Add Docker's official GPG key:
 sudo apt update
 sudo apt install ca-certificates curl
 sudo install -m 0755 -d /etc/apt/keyrings
