@@ -32,7 +32,7 @@ sudo chmod a+r /etc/apt/keyrings/docker.asc
 
 ### Add the repository to Apt sources:
 nano /etc/apt/sources.list.d/docker.sources
-### в файл sudo tee /etc/apt/sources.list.d/docker.sources пихаем настройки:
+### в файл /etc/apt/sources.list.d/docker.sources пихаем настройки:
  - Types: deb
  - URIs: https://download.docker.com/linux/debian
  - Suites: $(. /etc/os-release && echo "$VERSION_CODENAME")
