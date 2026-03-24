@@ -20,6 +20,28 @@ tags: documents
 Если соединение успешно, в консоли отобразится детальная информация о цепочке сертификатов и надпись CONNECTED(00000003). Если порт закрыт или заблокирован брандмауэром, вы увидите ошибку Connection refused или Operation timed out.
 
 
+# docker (УСТАНОВКА на 13 debian)
+
+СТАВИМ DOCKER, ниже чистая установка
+# Add Docker's official GPG key:
+sudo apt update
+sudo apt install ca-certificates curl
+sudo install -m 0755 -d /etc/apt/keyrings
+sudo curl -fsSL https://download.docker.com/linux/debian/gpg -o /etc/apt/keyrings/docker.asc
+sudo chmod a+r /etc/apt/keyrings/docker.asc
+
+### Add the repository to Apt sources:
+nano /etc/apt/sources.list.d/docker.sources
+### в файл sudo tee /etc/apt/sources.list.d/docker.sources пихаем настройки:
+Types: deb
+URIs: https://download.docker.com/linux/debian
+Suites: $(. /etc/os-release && echo "$VERSION_CODENAME")
+Components: stable
+Signed-By: /etc/apt/keyrings/docker.asc
+
+sudo apt update
+apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
+
 # docker
 - docker ps    # список активных контейнеров
 - docker exec -it КОНТЕЙНЕР bash  # войти внутрь запущенного контейнера
