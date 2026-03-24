@@ -33,14 +33,14 @@ sudo chmod a+r /etc/apt/keyrings/docker.asc
 ### Add the repository to Apt sources:
 nano /etc/apt/sources.list.d/docker.sources
 ### в файл sudo tee /etc/apt/sources.list.d/docker.sources пихаем настройки:
-Types: deb
-URIs: https://download.docker.com/linux/debian
-Suites: $(. /etc/os-release && echo "$VERSION_CODENAME")
-Components: stable
-Signed-By: /etc/apt/keyrings/docker.asc
+ - Types: deb
+ - URIs: https://download.docker.com/linux/debian
+ - Suites: $(. /etc/os-release && echo "$VERSION_CODENAME")
+ - Components: stable
+ - Signed-By: /etc/apt/keyrings/docker.asc
 
-sudo apt update
-apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
+ - sudo apt update
+ - apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
 
 # docker
 - docker ps    # список активных контейнеров
