@@ -19,6 +19,25 @@ tags: documents
 ## Какой будет результат:
 Если соединение успешно, в консоли отобразится детальная информация о цепочке сертификатов и надпись CONNECTED(00000003). Если порт закрыт или заблокирован брандмауэром, вы увидите ошибку Connection refused или Operation timed out.
 
+# docker (УСТАНОВКА на ubuntu 26.04)
+
+1. Скачиваем официальный GPG-ключ Docker (путь указан полностью):
+sudo apt-get update
+sudo apt-get install ca-certificates curl -y
+sudo install -m 0755 -d /etc/apt/keyrings
+sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
+sudo chmod a+r /etc/apt/keyrings/docker.asc
+
+2. Добавляем репозиторий в apt-зависимости (строка полностью готова):
+echo \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
+  $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
+  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+
+3. Обновляем списки пакетов и ставим Docker:
+sudo apt-get update
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
+
 
 # docker (УСТАНОВКА на 13 debian)
 
