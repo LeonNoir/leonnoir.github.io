@@ -251,6 +251,17 @@ tar -xjf имя_архива.tar.bz2 -C /путь/к/папке/
 Get-GPO -All | Select-Object DisplayName, CreationTime, ModificationTime | Sort-Object ModificationTime -Descending
 ```
 
+# КАМЕРЫ
+
+## ссылки на RTSP
+
+###
+
+BEWARD
+```no-line-numbers
+rtsp://admin:password@192.168.0.100:554/h264
+```
+
 ---
 ```no-line-numbers
 ```
