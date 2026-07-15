@@ -262,6 +262,12 @@ BEWARD
 rtsp://admin:password@192.168.0.100:554/h264
 ```
 
+DAHUA
+```no-line-numbers
+rtsp://admin:password@172.19.3.34:554/cam/realmonitor?channel=1&subtype=0
+```
+
+
 ---
 ```no-line-numbers
 ```
