@@ -232,16 +232,26 @@ UUID=54916ffb-36d8-41ef-b6a0-30365165d2fa  /var/lib/pgsql  xfs  defaults,noatime
 
 # РАСПАКОВКА \ UNZIP \ TAR
 ```no-line-numbers
-tar -xjf имя_архива.tar.bz2
+tar -xjf archive.tar.bz2
+```
+
+```no-line-numbers
+tar -xzf archive.tgz
 ```
 
 - -x (extract) — извлечь файлы.
-- -j (bzip2) — указание, что архив сжат именно через bzip2 (актуально для .tar.bz2).
+- -j (bzip2) — Распаковывает архивы .tar.bz2 или .tbz2
+- -z (gzip) — Распаковывает архивы .tar.gz или .tgz
 - -f (file) — указание имени файла.
 
 ## Распаковать в конкретную папку
 ```no-line-numbers
 tar -xjf имя_архива.tar.bz2 -C /путь/к/папке/ 
+```
+
+## Посмотреть файлы в архиве tgz
+```no-line-numbers
+tar -ztf имя_архива.tgz
 ```
 
 # Windows GPO
