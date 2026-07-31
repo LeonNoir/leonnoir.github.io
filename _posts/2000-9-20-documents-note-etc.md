@@ -261,18 +261,22 @@ tar -ztf имя_архива.tgz
 Get-GPO -All | Select-Object DisplayName, CreationTime, ModificationTime | Sort-Object ModificationTime -Descending
 ```
 
+
+
 # КАМЕРЫ
 
 ## ссылки на RTSP
 #BEWARD
+
 ```no-line-numbers
 rtsp://admin:password@192.168.0.100:554/h264
 ```
-
 #DAHUA
+
 ```no-line-numbers
 rtsp://admin:password@172.19.3.34:554/cam/realmonitor?channel=1&subtype=0
 ```
+
 
 
 
@@ -280,6 +284,7 @@ rtsp://admin:password@172.19.3.34:554/cam/realmonitor?channel=1&subtype=0
 
 функция встроена и называется Spoof Source IP. Она запускается ключом -S.Чтобы запустить сканирование от 10.10.10.4 к цели 192.168.1.20
 но ответ цель будет отправлять обратно на 10.10.10.4 если что, и ответа к nmap не будет
+
 ```no-line-numbers
 nmap -Pn -e [имя_вашего_сетевого_интерфейса] -S 10.10.10.4 -p 5650 192.168.1.20
 ```
