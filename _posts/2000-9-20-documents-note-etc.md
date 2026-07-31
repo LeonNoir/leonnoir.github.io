@@ -239,10 +239,6 @@ tar -xjf archive.tar.bz2
 tar -xzf archive.tgz
 ```
 
-```no-line-numbers
-tar -xzf archive.tgz -C /path/to/folder
-```
-
 - -x (extract) — извлечь файлы.
 - -j (bzip2) — Распаковывает архивы .tar.bz2 или .tbz2
 - -z (gzip) — Распаковывает архивы .tar.gz или .tgz
@@ -250,7 +246,7 @@ tar -xzf archive.tgz -C /path/to/folder
 
 ## Распаковать в конкретную папку
 ```no-line-numbers
-tar -xjf имя_архива.tar.bz2 -C /путь/к/папке/ 
+tar -xjf имя_архива.tar.bz2 -C /путь/к/папке/       ————        tar -xzf archive.tgz -C /путь/к/папке/
 ```
 
 ## Посмотреть файлы в архиве tgz
