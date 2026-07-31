@@ -246,7 +246,7 @@ tar -xzf archive.tgz
 
 ## Распаковать в конкретную папку
 ```no-line-numbers
-tar -xjf имя_архива.tar.bz2 -C /путь/к/папке/       ————        tar -xzf archive.tgz -C /путь/к/папке/
+tar -xjf имя_архива.tar.bz2 -C /путь/к/папке/    ИЛИ    tar -xzf archive.tgz -C /путь/к/папке/
 ```
 
 ## Посмотреть файлы в архиве tgz
