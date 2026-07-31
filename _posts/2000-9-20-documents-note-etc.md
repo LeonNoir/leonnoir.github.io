@@ -264,20 +264,19 @@ Get-GPO -All | Select-Object DisplayName, CreationTime, ModificationTime | Sort-
 # КАМЕРЫ
 
 ## ссылки на RTSP
-
-###
-
-BEWARD
+#BEWARD
 ```no-line-numbers
 rtsp://admin:password@192.168.0.100:554/h264
 ```
 
-DAHUA
+#DAHUA
 ```no-line-numbers
 rtsp://admin:password@172.19.3.34:554/cam/realmonitor?channel=1&subtype=0
 ```
 
-NMAP
+
+
+#NMAP
 
 функция встроена и называется Spoof Source IP. Она запускается ключом -S.Чтобы запустить сканирование от 10.10.10.4 к цели 192.168.1.20
 но ответ цель будет отправлять обратно на 10.10.10.4 если что, и ответа к nmap не будет
